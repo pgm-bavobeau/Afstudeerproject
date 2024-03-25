@@ -1,0 +1,10 @@
+---
+id: home
+blueprint: pages
+title: Home
+template: home
+author: 5f3ca023-efc0-4cf9-bfa2-5f2951f37174
+updated_by: 5f3ca023-efc0-4cf9-bfa2-5f2951f37174
+updated_at: 1711392207
+---
+## anything i want
