@@ -4,7 +4,7 @@ blueprint: page
 layout: default
 title: 'KSA Sint-Lieven Jongens uniform'
 updated_by: 5f3ca023-efc0-4cf9-bfa2-5f2951f37174
-updated_at: 1712505552
+updated_at: 1712506579
 parent: 4bb0bd53-5ba2-4801-bad4-a5b392de59f1
 flexible_content:
   -
@@ -88,7 +88,8 @@ flexible_content:
                 attrs:
                   colspan: 1
                   rowspan: 1
-                  colwidth: null
+                  colwidth:
+                    - 187
                 content:
                   -
                     type: paragraph
@@ -117,7 +118,8 @@ flexible_content:
                 attrs:
                   colspan: 1
                   rowspan: 1
-                  colwidth: null
+                  colwidth:
+                    - 187
                 content:
                   -
                     type: paragraph
@@ -146,7 +148,8 @@ flexible_content:
                 attrs:
                   colspan: 1
                   rowspan: 1
-                  colwidth: null
+                  colwidth:
+                    - 187
                 content:
                   -
                     type: paragraph
@@ -166,7 +169,7 @@ flexible_content:
                     content:
                       -
                         type: text
-                        text: '€ 40,00'
+                        text: '€ 35,00'
           -
             type: tableRow
             content:
@@ -175,7 +178,8 @@ flexible_content:
                 attrs:
                   colspan: 1
                   rowspan: 1
-                  colwidth: null
+                  colwidth:
+                    - 187
                 content:
                   -
                     type: paragraph
@@ -204,7 +208,38 @@ flexible_content:
                 attrs:
                   colspan: 1
                   rowspan: 1
+                  colwidth:
+                    - 187
+                content:
+                  -
+                    type: paragraph
+                    content:
+                      -
+                        type: text
+                        text: T-shirt
+              -
+                type: tableCell
+                attrs:
+                  colspan: 1
+                  rowspan: 1
                   colwidth: null
+                content:
+                  -
+                    type: paragraph
+                    content:
+                      -
+                        type: text
+                        text: '€ 15,00'
+          -
+            type: tableRow
+            content:
+              -
+                type: tableCell
+                attrs:
+                  colspan: 1
+                  rowspan: 1
+                  colwidth:
+                    - 187
                 content:
                   -
                     type: paragraph
@@ -233,7 +268,8 @@ flexible_content:
                 attrs:
                   colspan: 1
                   rowspan: 1
-                  colwidth: null
+                  colwidth:
+                    - 187
                 content:
                   -
                     type: paragraph
@@ -262,7 +298,8 @@ flexible_content:
                 attrs:
                   colspan: 1
                   rowspan: 1
-                  colwidth: null
+                  colwidth:
+                    - 187
                 content:
                   -
                     type: paragraph
@@ -291,7 +328,8 @@ flexible_content:
                 attrs:
                   colspan: 1
                   rowspan: 1
-                  colwidth: null
+                  colwidth:
+                    - 187
                 content:
                   -
                     type: paragraph
@@ -320,7 +358,8 @@ flexible_content:
                 attrs:
                   colspan: 1
                   rowspan: 1
-                  colwidth: null
+                  colwidth:
+                    - 187
                 content:
                   -
                     type: paragraph
@@ -349,7 +388,8 @@ flexible_content:
                 attrs:
                   colspan: 1
                   rowspan: 1
-                  colwidth: null
+                  colwidth:
+                    - 187
                 content:
                   -
                     type: paragraph
@@ -378,7 +418,8 @@ flexible_content:
                 attrs:
                   colspan: 1
                   rowspan: 1
-                  colwidth: null
+                  colwidth:
+                    - 187
                 content:
                   -
                     type: paragraph
@@ -399,35 +440,8 @@ flexible_content:
                       -
                         type: text
                         text: '€ 1,00'
-          -
-            type: tableRow
-            content:
-              -
-                type: tableCell
-                attrs:
-                  colspan: 1
-                  rowspan: 1
-                  colwidth: null
-                content:
-                  -
-                    type: paragraph
-                    content:
-                      -
-                        type: text
-                        text: T-Shirt
-              -
-                type: tableCell
-                attrs:
-                  colspan: 1
-                  rowspan: 1
-                  colwidth: null
-                content:
-                  -
-                    type: paragraph
-                    content:
-                      -
-                        type: text
-                        text: '€ 2,00'
     type: fifty_fifty
     enabled: true
+header: Uniform
+subheader: 'Welkom in onze uniformwinkel!'
 ---
