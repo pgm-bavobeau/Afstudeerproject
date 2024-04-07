@@ -1,6 +1,7 @@
 title: Page
 tabs:
   main:
+    display: Main
     sections:
       -
         fields:
@@ -9,20 +10,10 @@ tabs:
             field:
               type: text
               required: true
+              validate:
+                - required
           -
-            handle: content
-            field:
-              type: markdown
-              display: Content
-              localizable: true
-          -
-            handle: author
-            field:
-              type: users
-              display: Author
-              default: current
-              localizable: true
-              max_items: 1
+            import: flexible_content
           -
             handle: template
             field:
@@ -30,6 +21,7 @@ tabs:
               display: Template
               localizable: true
   sidebar:
+    display: Sidebar
     sections:
       -
         fields:
