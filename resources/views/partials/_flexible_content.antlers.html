@@ -1,0 +1,61 @@
+{{ if type == 'full' }}
+{{ if header }}
+<h2>{{ header }}</h2>
+{{ /if }}
+<div>
+    {{ full }}
+        {{ partial:bard }}
+    {{ /full }}
+</div>
+{{ elseif type == 'fifty_fifty' }}
+{{ if header }}
+<h2>{{ header }}</h2>
+{{ /if }}
+<div class="grid grid-cols-2 gap-4">
+    <div>
+        {{ left }}
+        {{ partial:bard }}
+        {{ /left }}
+    </div>
+    <div>
+        {{ right }}
+        {{ partial:bard }}
+        {{ /right }}
+    </div>
+</div>
+{{ elseif type == '3_rows' }}
+{{ if header }}
+<h2>{{ header }}</h2>
+{{ /if }}
+<div class="grid grid-cols-3 gap-4">
+    <div>
+        {{ first_row }}
+        {{ partial:bard }}
+        {{ /first_row }}
+    </div>
+    <div>
+        {{ second_row }}
+        {{ partial:bard }}
+        {{ /second_row }}
+    </div>
+    <div>
+        {{ third_row }}
+        {{ partial:bard }}
+        {{ /third_row }}
+    </div>
+</div>
+{{ elseif type == 'centered_row' }}
+<div class="">
+    {{ if full_image}}
+        {{ full_image }}
+            <img src="{{ url }}" alt="{{ alt }}" />
+        {{ /full_image }}
+    {{ /if }}
+    <div>
+        {{ if header }}
+            <h2>{{ header }}</h2>
+        {{ /if }}
+        {{ text }}
+    </div>
+</div>
+{{ /if }}

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{ title }}</title>
+        <link
+            href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+            rel="stylesheet"
+        />
+    </head>
+    <body class="bg-gray-900 text-white">
+        {{ partial:nav }}
+        <main class="container mx-auto py-8">{{ template_content }}</main>
+    </body>
+</html>

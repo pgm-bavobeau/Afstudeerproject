@@ -1,0 +1,37 @@
+<section>
+    <div>
+        <p>Here come 3 cards with the first card being the upcoming event.</p>
+    </div>
+</section>
+{{ panels }}
+<section class="">
+    <h2>{{ panel_title }}</h2>
+    <div class="grid grid-cols-2 gap-8 pb-12">
+        <div class="relative {{ index % 2 ?= 'order-last' }}">
+            {{ if panel_image }}
+            {{ panel_image }}
+            <img src="{{ url }}" alt="{{ alt }}" />
+            {{ /panel_image}}
+            {{ /if }} {{ if panel_video }}
+            <iframe
+                src="{{ panel_video}}"
+                frameborder="0"
+                gesture="media"
+                allow="encrypted-media"
+                allowfullscreen
+            ></iframe>
+            {{ /if }}
+        </div>
+        <div>
+            <h3>{{ panel_subtitle }}</h3>
+            <p>{{ panel_text }}</p>
+            <a href="{{ cta_link }}">{{ cta_text }}</a>
+        </div>
+    </div>
+</section>
+{{ /panels }} 
+{{ flexible_content }}
+<section>
+    {{ partial:flexible_content }}
+</section>
+{{ /flexible_content }}

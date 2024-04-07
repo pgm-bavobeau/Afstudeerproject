@@ -1,0 +1,135 @@
+hide: true
+title: Landing
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+              instructions: 'This title is shown in the tab of the page naxt to the favicon'
+              instructions_position: above
+              listable: hidden
+              visibility: visible
+              replicator_preview: true
+              input_type: text
+              antlers: false
+              hide_display: false
+          -
+            handle: page_title
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'Page title'
+              instructions: 'This is the title shown on the page'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: subtitle
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: Subtitle
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: background_image
+            field:
+              max_files: 1
+              mode: list
+              container: assets
+              restrict: false
+              allow_uploads: true
+              show_filename: true
+              show_set_alt: true
+              type: assets
+              display: 'Background image'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: site_selector_buttons
+            field:
+              collapse: false
+              previews: true
+              fullscreen: true
+              sets:
+                new_set_group:
+                  display: 'New Set Group'
+                  instructions: null
+                  icon: null
+                  sets:
+                    site_button:
+                      display: 'Site button'
+                      instructions: null
+                      icon: hierarchy-vertical-nav-flow
+                      fields:
+                        -
+                          handle: name
+                          field:
+                            input_type: text
+                            antlers: false
+                            type: text
+                            display: Name
+                            instructions: 'name of the button'
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+                        -
+                          handle: url
+                          field:
+                            collections:
+                              - pages
+                            type: link
+                            display: url
+                            instructions: 'url to the site'
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+              type: replicator
+              display: 'Site selector buttons'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'
+          -
+            handle: parent
+            field:
+              type: entries
+              collections:
+                - pages
+              max_items: 1
+              listable: false
+              localizable: true
