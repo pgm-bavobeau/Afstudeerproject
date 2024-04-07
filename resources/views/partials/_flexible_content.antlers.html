@@ -1,4 +1,30 @@
-{{ if type == 'full' }}
+{{ if type == 'panel_group' }}
+{{ panels }}
+    <h2>{{ panel_title }}</h2>
+    <div class="grid grid-cols-2 gap-8 pb-12">
+        <div class="relative {{ index % 2 ?= 'order-last' }}">
+            {{ if panel_image }}
+            {{ panel_image }}
+            <img src="{{ url }}" alt="{{ alt }}" />
+            {{ /panel_image}}
+            {{ /if }} {{ if panel_video }}
+            <iframe
+                src="{{ panel_video}}"
+                frameborder="0"
+                gesture="media"
+                allow="encrypted-media"
+                allowfullscreen
+            ></iframe>
+            {{ /if }}
+        </div>
+        <div>
+            <h3>{{ panel_subtitle }}</h3>
+            <p>{{ panel_text }}</p>
+            <a href="{{ cta_link }}">{{ cta_text }}</a>
+        </div>
+    </div>
+{{ /panels }}
+{{ elseif type == 'full' }}
 {{ if header }}
 <h2>{{ header }}</h2>
 {{ /if }}
@@ -23,28 +49,28 @@
         {{ /right }}
     </div>
 </div>
-{{ elseif type == '3_rows' }}
+{{ elseif type == '3_cols' }}
 {{ if header }}
 <h2>{{ header }}</h2>
 {{ /if }}
 <div class="grid grid-cols-3 gap-4">
     <div>
-        {{ first_row }}
+        {{ first_col }}
         {{ partial:bard }}
-        {{ /first_row }}
+        {{ /first_col }}
     </div>
     <div>
-        {{ second_row }}
+        {{ second_col }}
         {{ partial:bard }}
-        {{ /second_row }}
+        {{ /second_col }}
     </div>
     <div>
-        {{ third_row }}
+        {{ third_col }}
         {{ partial:bard }}
-        {{ /third_row }}
+        {{ /third_col }}
     </div>
 </div>
-{{ elseif type == 'centered_row' }}
+{{ elseif type == 'centered_col' }}
 <div class="">
     {{ if full_image}}
         {{ full_image }}

@@ -1,4 +1,4 @@
-title: home
+title: Home
 tabs:
   main:
     display: Main
@@ -29,216 +29,6 @@ tabs:
               replicator_preview: true
               hide_display: false
           -
-            handle: panels
-            field:
-              collapse: false
-              previews: true
-              fullscreen: true
-              sets:
-                new_set_group:
-                  display: 'New Set Group'
-                  instructions: null
-                  icon: null
-                  sets:
-                    image_panel:
-                      display: 'Image panel'
-                      instructions: null
-                      icon: null
-                      fields:
-                        -
-                          handle: panel_title
-                          field:
-                            input_type: text
-                            antlers: false
-                            type: text
-                            display: 'Panel title'
-                            listable: hidden
-                            instructions_position: above
-                            visibility: visible
-                            replicator_preview: true
-                            hide_display: false
-                        -
-                          handle: panel_subtitle
-                          field:
-                            input_type: text
-                            antlers: false
-                            type: text
-                            display: 'Panel subtitle'
-                            listable: hidden
-                            instructions_position: above
-                            visibility: visible
-                            replicator_preview: true
-                            hide_display: false
-                        -
-                          handle: panel_text
-                          field:
-                            restrict: false
-                            buttons:
-                              - bold
-                              - italic
-                              - unorderedlist
-                              - orderedlist
-                              - quote
-                              - link
-                              - image
-                              - table
-                            automatic_line_breaks: true
-                            automatic_links: false
-                            escape_markup: false
-                            heading_anchors: false
-                            smartypants: false
-                            table_of_contents: false
-                            antlers: false
-                            type: markdown
-                            display: 'Panel text'
-                            listable: hidden
-                            instructions_position: above
-                            visibility: visible
-                            replicator_preview: true
-                            hide_display: false
-                        -
-                          handle: panel_image
-                          field:
-                            mode: list
-                            container: assets
-                            restrict: false
-                            allow_uploads: true
-                            show_filename: true
-                            show_set_alt: true
-                            type: assets
-                            display: 'Panel image'
-                            listable: hidden
-                            instructions_position: above
-                            visibility: visible
-                            replicator_preview: true
-                            hide_display: false
-                        -
-                          handle: cta_text
-                          field:
-                            input_type: text
-                            antlers: false
-                            type: text
-                            display: 'CTA Text'
-                            listable: hidden
-                            instructions_position: above
-                            visibility: visible
-                            replicator_preview: true
-                            hide_display: false
-                            width: 50
-                        -
-                          handle: cta_link
-                          field:
-                            collections:
-                              - pages
-                            type: link
-                            display: 'CTA Link'
-                            listable: hidden
-                            instructions_position: above
-                            visibility: visible
-                            replicator_preview: true
-                            hide_display: false
-                            width: 50
-                    video_panel:
-                      display: 'Video panel'
-                      instructions: null
-                      icon: null
-                      fields:
-                        -
-                          handle: panel_title
-                          field:
-                            input_type: text
-                            antlers: false
-                            type: text
-                            display: 'Panel title'
-                            listable: hidden
-                            instructions_position: above
-                            visibility: visible
-                            replicator_preview: true
-                            hide_display: false
-                        -
-                          handle: panel_subtitle
-                          field:
-                            input_type: text
-                            antlers: false
-                            type: text
-                            display: 'Panel subtitle'
-                            listable: hidden
-                            instructions_position: above
-                            visibility: visible
-                            replicator_preview: true
-                            hide_display: false
-                        -
-                          handle: panel_text
-                          field:
-                            restrict: false
-                            buttons:
-                              - bold
-                              - italic
-                              - unorderedlist
-                              - orderedlist
-                              - quote
-                              - link
-                              - image
-                              - table
-                            automatic_line_breaks: true
-                            automatic_links: false
-                            escape_markup: false
-                            heading_anchors: false
-                            smartypants: false
-                            table_of_contents: false
-                            antlers: false
-                            type: markdown
-                            display: 'Panel text'
-                            listable: hidden
-                            instructions_position: above
-                            visibility: visible
-                            replicator_preview: true
-                            hide_display: false
-                        -
-                          handle: panel_video
-                          field:
-                            type: video
-                            display: 'Panel video'
-                            listable: hidden
-                            instructions_position: above
-                            visibility: visible
-                            replicator_preview: true
-                            hide_display: false
-                            instructions: 'Make sure you use a yt embed link'
-                        -
-                          handle: cta_text
-                          field:
-                            input_type: text
-                            antlers: false
-                            type: text
-                            display: 'CTA Text'
-                            listable: hidden
-                            instructions_position: above
-                            visibility: visible
-                            replicator_preview: true
-                            hide_display: false
-                            width: 50
-                        -
-                          handle: cta_link
-                          field:
-                            collections:
-                              - pages
-                            type: link
-                            display: 'CTA Link'
-                            listable: hidden
-                            instructions_position: above
-                            visibility: visible
-                            replicator_preview: true
-                            hide_display: false
-                            width: 50
-              type: replicator
-              display: Panels
-              listable: hidden
-              instructions_position: above
-              visibility: visible
-              replicator_preview: true
-              hide_display: false
-          -
             handle: flexible_content
             field:
               collapse: false
@@ -250,6 +40,221 @@ tabs:
                   instructions: null
                   icon: null
                   sets:
+                    panel_group:
+                      display: 'Panel group'
+                      instructions: null
+                      icon: null
+                      fields:
+                        -
+                          handle: panels
+                          field:
+                            collapse: false
+                            previews: true
+                            fullscreen: true
+                            sets:
+                              new_set_group:
+                                display: 'New Set Group'
+                                instructions: null
+                                icon: null
+                                sets:
+                                  image_panel:
+                                    display: 'Image panel'
+                                    instructions: null
+                                    icon: null
+                                    fields:
+                                      -
+                                        handle: panel_title
+                                        field:
+                                          input_type: text
+                                          antlers: false
+                                          type: text
+                                          display: 'Panel title'
+                                          listable: hidden
+                                          instructions_position: above
+                                          visibility: visible
+                                          replicator_preview: true
+                                          hide_display: false
+                                      -
+                                        handle: panel_subtitle
+                                        field:
+                                          input_type: text
+                                          antlers: false
+                                          type: text
+                                          display: 'Panel subtitle'
+                                          listable: hidden
+                                          instructions_position: above
+                                          visibility: visible
+                                          replicator_preview: true
+                                          hide_display: false
+                                      -
+                                        handle: panel_text
+                                        field:
+                                          restrict: false
+                                          buttons:
+                                            - bold
+                                            - italic
+                                            - unorderedlist
+                                            - orderedlist
+                                            - quote
+                                            - link
+                                            - image
+                                            - table
+                                          automatic_line_breaks: true
+                                          automatic_links: false
+                                          escape_markup: false
+                                          heading_anchors: false
+                                          smartypants: false
+                                          table_of_contents: false
+                                          antlers: false
+                                          type: markdown
+                                          display: 'Panel text'
+                                          listable: hidden
+                                          instructions_position: above
+                                          visibility: visible
+                                          replicator_preview: true
+                                          hide_display: false
+                                      -
+                                        handle: panel_image
+                                        field:
+                                          mode: list
+                                          container: assets
+                                          restrict: false
+                                          allow_uploads: true
+                                          show_filename: true
+                                          show_set_alt: true
+                                          type: assets
+                                          display: 'Panel image'
+                                          listable: hidden
+                                          instructions_position: above
+                                          visibility: visible
+                                          replicator_preview: true
+                                          hide_display: false
+                                      -
+                                        handle: cta_text
+                                        field:
+                                          input_type: text
+                                          antlers: false
+                                          type: text
+                                          display: 'CTA Text'
+                                          listable: hidden
+                                          instructions_position: above
+                                          visibility: visible
+                                          replicator_preview: true
+                                          hide_display: false
+                                          width: 50
+                                      -
+                                        handle: cta_link
+                                        field:
+                                          collections:
+                                            - pages
+                                          type: link
+                                          display: 'CTA Link'
+                                          listable: hidden
+                                          instructions_position: above
+                                          visibility: visible
+                                          replicator_preview: true
+                                          hide_display: false
+                                          width: 50
+                                  video_panel:
+                                    display: 'Video panel'
+                                    instructions: null
+                                    icon: null
+                                    fields:
+                                      -
+                                        handle: panel_title
+                                        field:
+                                          input_type: text
+                                          antlers: false
+                                          type: text
+                                          display: 'Panel title'
+                                          listable: hidden
+                                          instructions_position: above
+                                          visibility: visible
+                                          replicator_preview: true
+                                          hide_display: false
+                                      -
+                                        handle: panel_subtitle
+                                        field:
+                                          input_type: text
+                                          antlers: false
+                                          type: text
+                                          display: 'Panel subtitle'
+                                          listable: hidden
+                                          instructions_position: above
+                                          visibility: visible
+                                          replicator_preview: true
+                                          hide_display: false
+                                      -
+                                        handle: panel_text
+                                        field:
+                                          restrict: false
+                                          buttons:
+                                            - bold
+                                            - italic
+                                            - unorderedlist
+                                            - orderedlist
+                                            - quote
+                                            - link
+                                            - image
+                                            - table
+                                          automatic_line_breaks: true
+                                          automatic_links: false
+                                          escape_markup: false
+                                          heading_anchors: false
+                                          smartypants: false
+                                          table_of_contents: false
+                                          antlers: false
+                                          type: markdown
+                                          display: 'Panel text'
+                                          listable: hidden
+                                          instructions_position: above
+                                          visibility: visible
+                                          replicator_preview: true
+                                          hide_display: false
+                                      -
+                                        handle: panel_video
+                                        field:
+                                          type: video
+                                          display: 'Panel video'
+                                          listable: hidden
+                                          instructions_position: above
+                                          visibility: visible
+                                          replicator_preview: true
+                                          hide_display: false
+                                          instructions: 'Make sure you use a yt embed link'
+                                      -
+                                        handle: cta_text
+                                        field:
+                                          input_type: text
+                                          antlers: false
+                                          type: text
+                                          display: 'CTA Text'
+                                          listable: hidden
+                                          instructions_position: above
+                                          visibility: visible
+                                          replicator_preview: true
+                                          hide_display: false
+                                          width: 50
+                                      -
+                                        handle: cta_link
+                                        field:
+                                          collections:
+                                            - pages
+                                          type: link
+                                          display: 'CTA Link'
+                                          listable: hidden
+                                          instructions_position: above
+                                          visibility: visible
+                                          replicator_preview: true
+                                          hide_display: false
+                                          width: 50
+                            type: replicator
+                            display: Panels
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
                     full:
                       display: Full
                       instructions: null
@@ -622,8 +627,8 @@ tabs:
                             visibility: visible
                             replicator_preview: true
                             hide_display: false
-                    3_rows:
-                      display: '3 rows'
+                    3_cols:
+                      display: '3 cols'
                       instructions: null
                       icon: null
                       fields:
@@ -640,7 +645,7 @@ tabs:
                             replicator_preview: true
                             hide_display: false
                         -
-                          handle: first_row
+                          handle: first_col
                           field:
                             buttons:
                               - h2
@@ -745,7 +750,7 @@ tabs:
                             collapse: false
                             previews: true
                             type: bard
-                            display: 'First row'
+                            display: 'First col'
                             width: 33
                             listable: hidden
                             instructions_position: above
@@ -753,7 +758,7 @@ tabs:
                             replicator_preview: true
                             hide_display: false
                         -
-                          handle: second_row
+                          handle: second_col
                           field:
                             buttons:
                               - h2
@@ -858,7 +863,7 @@ tabs:
                             collapse: false
                             previews: true
                             type: bard
-                            display: 'Second row'
+                            display: 'Second col'
                             width: 33
                             listable: hidden
                             instructions_position: above
@@ -866,7 +871,7 @@ tabs:
                             replicator_preview: true
                             hide_display: false
                         -
-                          handle: third_row
+                          handle: third_col
                           field:
                             buttons:
                               - h2
@@ -971,73 +976,20 @@ tabs:
                             collapse: false
                             previews: true
                             type: bard
-                            display: 'Third row'
+                            display: 'Third col'
                             width: 33
                             listable: hidden
                             instructions_position: above
                             visibility: visible
                             replicator_preview: true
                             hide_display: false
-                    centered_row:
-                      display: 'Centered row'
+                    centered_col:
+                      display: 'Centered col'
                       instructions: null
                       icon: null
                       fields:
                         -
-                          handle: header
-                          field:
-                            input_type: text
-                            antlers: false
-                            type: text
-                            display: Header
-                            listable: hidden
-                            instructions_position: above
-                            visibility: visible
-                            replicator_preview: true
-                            hide_display: false
-                        -
-                          handle: text
-                          field:
-                            restrict: false
-                            buttons:
-                              - bold
-                              - italic
-                              - unorderedlist
-                              - orderedlist
-                              - quote
-                              - link
-                              - image
-                              - table
-                            automatic_line_breaks: true
-                            automatic_links: false
-                            escape_markup: false
-                            heading_anchors: false
-                            smartypants: false
-                            table_of_contents: false
-                            antlers: false
-                            type: markdown
-                            display: Text
-                            listable: hidden
-                            instructions_position: above
-                            visibility: visible
-                            replicator_preview: true
-                            hide_display: false
-                        -
-                          handle: full_image
-                          field:
-                            mode: list
-                            container: assets
-                            restrict: false
-                            allow_uploads: true
-                            show_filename: true
-                            show_set_alt: true
-                            type: assets
-                            display: 'Full image'
-                            listable: hidden
-                            instructions_position: above
-                            visibility: visible
-                            replicator_preview: true
-                            hide_display: false
+                          import: centered_col
               type: replicator
               display: 'Flexible content'
               instructions: 'Here you can create rows of customizable content'
@@ -1046,6 +998,10 @@ tabs:
               visibility: visible
               replicator_preview: true
               hide_display: false
+      -
+        display: Leiding
+      -
+        display: Bannen
   sidebar:
     display: Sidebar
     sections:
