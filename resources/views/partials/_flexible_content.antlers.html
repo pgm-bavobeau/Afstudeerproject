@@ -72,15 +72,12 @@
 </div>
 {{ elseif type == 'centered_col' }}
 <div class="">
-    {{ if full_image}}
-        {{ full_image }}
+    {{ if background_image }}
+        {{ background_image }}
             <img src="{{ url }}" alt="{{ alt }}" />
-        {{ /full_image }}
+        {{ /background_image }}
     {{ /if }}
     <div>
-        {{ if header }}
-            <h2>{{ header }}</h2>
-        {{ /if }}
         {{ text }}
     </div>
 </div>

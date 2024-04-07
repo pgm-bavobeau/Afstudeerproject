@@ -1,43 +1,48 @@
-title: 'Image Card'
+title: 'Image Panel'
 fields:
   -
-    handle: image_card_title
+    handle: panel_title
     field:
       input_type: text
       antlers: false
       type: text
-      display: 'Image card title'
+      display: 'Panel title'
       listable: hidden
       instructions_position: above
       visibility: visible
       replicator_preview: true
       hide_display: false
   -
-    handle: image_card_subtitle
+    handle: panel_text
     field:
-      input_type: text
+      restrict: false
+      buttons:
+        - bold
+        - italic
+        - unorderedlist
+        - orderedlist
+        - quote
+        - link
+        - image
+        - table
+      automatic_line_breaks: true
+      automatic_links: false
+      escape_markup: false
+      heading_anchors: false
+      smartypants: false
+      table_of_contents: false
       antlers: false
-      type: text
-      display: 'Image card subtitle'
+      type: markdown
+      display: 'Panel text'
+      width: 66
       listable: hidden
       instructions_position: above
       visibility: visible
       replicator_preview: true
       hide_display: false
   -
-    handle: image_card_link
+    handle: panel_image
     field:
-      type: link
-      display: 'Image card link'
-      listable: hidden
-      instructions_position: above
-      visibility: visible
-      replicator_preview: true
-      hide_display: false
-  -
-    handle: image_card_image
-    field:
-      max_files: 1
       mode: list
       container: assets
       restrict: false
@@ -45,9 +50,12 @@ fields:
       show_filename: true
       show_set_alt: true
       type: assets
-      display: 'Image card image'
+      display: 'Panel image'
+      width: 33
       listable: hidden
       instructions_position: above
       visibility: visible
       replicator_preview: true
       hide_display: false
+  -
+    import: cta

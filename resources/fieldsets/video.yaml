@@ -1,0 +1,13 @@
+title: 'Video Block'
+fields:
+  -
+    handle: video
+    field:
+      type: video
+      display: Video
+      instructions: 'Make sure to use a yt embed link'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false

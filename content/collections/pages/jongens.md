@@ -1,11 +1,11 @@
 ---
 id: 4bb0bd53-5ba2-4801-bad4-a5b392de59f1
 blueprint: home
-layout: default
+layout: home
 title: 'KSA Sint-Lieven Jongens'
 author: 5f3ca023-efc0-4cf9-bfa2-5f2951f37174
 updated_by: 5f3ca023-efc0-4cf9-bfa2-5f2951f37174
-updated_at: 1712498043
+updated_at: 1712504910
 parent: home
 template: templates/home
 flexible_content:
@@ -222,6 +222,8 @@ flexible_content:
     id: lupgruuh
     header: 'Het KSA-Lied!'
     text: |-
+      ## Het KSA-Lied!
+
       Als je een clubje van toffe jongens ziet,
       Van je heidel diedel doedel diedel da.
       En je hoort van ver reeds een vrolijk lied,

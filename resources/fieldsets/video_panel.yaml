@@ -1,0 +1,23 @@
+title: 'Video Panel'
+fields:
+  -
+    handle: panel_title
+    field: image_panel.panel_title
+  -
+    handle: panel_text
+    field: image_panel.panel_text
+    config:
+      width: 66
+  -
+    handle: panel_video
+    field:
+      type: video
+      display: 'Panel video'
+      width: 33
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    import: cta

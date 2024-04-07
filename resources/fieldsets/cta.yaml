@@ -1,0 +1,26 @@
+title: 'Call to action'
+fields:
+  -
+    handle: cta_text
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: 'CTA Text'
+      width: 50
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    handle: cta_link
+    field:
+      type: link
+      display: 'CTA Link'
+      width: 50
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false

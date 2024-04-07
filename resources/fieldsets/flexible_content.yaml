@@ -1,0 +1,524 @@
+title: 'Flexible Content'
+fields:
+  -
+    handle: flexible_content
+    field:
+      collapse: false
+      previews: true
+      fullscreen: true
+      sets:
+        new_set_group:
+          display: 'New Set Group'
+          instructions: null
+          icon: null
+          sets:
+            panel_group:
+              display: 'Panel Group'
+              instructions: null
+              icon: null
+              fields:
+                -
+                  handle: panels
+                  field:
+                    collapse: false
+                    previews: true
+                    fullscreen: true
+                    sets:
+                      new_set_group:
+                        display: 'New Set Group'
+                        instructions: null
+                        icon: null
+                        sets:
+                          image_panel:
+                            display: 'Image Panel'
+                            instructions: null
+                            icon: null
+                            fields:
+                              -
+                                import: image_panel
+                          video_panel:
+                            display: 'Video Panel'
+                            instructions: null
+                            icon: null
+                            fields:
+                              -
+                                import: video_panel
+                    type: replicator
+                    display: Panels
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+            full:
+              display: 'Full Block'
+              instructions: 'Create a single large column of rich text'
+              icon: null
+              fields:
+                -
+                  import: rich_text_block
+            fifty_fifty:
+              display: 'Fifty Fifty'
+              instructions: 'create 2 columns of rich text'
+              icon: null
+              fields:
+                -
+                  handle: header
+                  field:
+                    input_type: text
+                    antlers: false
+                    type: text
+                    display: Header
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                -
+                  handle: left
+                  field:
+                    buttons:
+                      - h2
+                      - h3
+                      - bold
+                      - italic
+                      - unorderedlist
+                      - orderedlist
+                      - removeformat
+                      - quote
+                      - anchor
+                      - image
+                      - table
+                      - h1
+                      - h4
+                      - underline
+                      - strikethrough
+                    smart_typography: false
+                    save_html: false
+                    inline: false
+                    toolbar_mode: fixed
+                    reading_time: false
+                    word_count: false
+                    fullscreen: true
+                    allow_source: true
+                    enable_input_rules: true
+                    enable_paste_rules: true
+                    remove_empty_nodes: false
+                    antlers: false
+                    link_noopener: false
+                    link_noreferrer: false
+                    target_blank: false
+                    sets:
+                      new_set_group:
+                        display: 'New Set Group'
+                        instructions: null
+                        icon: null
+                        sets:
+                          image:
+                            display: Image
+                            instructions: null
+                            icon: null
+                            fields:
+                              -
+                                import: image
+                          video:
+                            display: Video
+                            instructions: null
+                            icon: null
+                            fields:
+                              -
+                                import: video
+                          cta:
+                            display: CTA
+                            instructions: null
+                            icon: null
+                            fields:
+                              -
+                                import: cta
+                    always_show_set_button: false
+                    collapse: false
+                    previews: true
+                    type: bard
+                    display: Left
+                    width: 50
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                -
+                  handle: right
+                  field:
+                    buttons:
+                      - h2
+                      - h3
+                      - bold
+                      - italic
+                      - unorderedlist
+                      - orderedlist
+                      - removeformat
+                      - quote
+                      - anchor
+                      - image
+                      - table
+                      - h1
+                      - h4
+                      - underline
+                      - strikethrough
+                    smart_typography: false
+                    save_html: false
+                    inline: false
+                    toolbar_mode: fixed
+                    reading_time: false
+                    word_count: false
+                    fullscreen: true
+                    allow_source: true
+                    enable_input_rules: true
+                    enable_paste_rules: true
+                    remove_empty_nodes: false
+                    antlers: false
+                    link_noopener: false
+                    link_noreferrer: false
+                    target_blank: false
+                    sets:
+                      new_set_group:
+                        display: 'New Set Group'
+                        instructions: null
+                        icon: null
+                        sets:
+                          image:
+                            display: Image
+                            instructions: null
+                            icon: null
+                            fields:
+                              -
+                                import: image
+                          video:
+                            display: Video
+                            instructions: null
+                            icon: null
+                            fields:
+                              -
+                                import: video
+                          cta:
+                            display: CTA
+                            instructions: null
+                            icon: null
+                            fields:
+                              -
+                                import: cta
+                    always_show_set_button: false
+                    collapse: false
+                    previews: true
+                    type: bard
+                    display: Right
+                    width: 50
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+            3_cols:
+              display: '3 cols'
+              instructions: 'create 3 columns of rich text blocks'
+              icon: null
+              fields:
+                -
+                  handle: header
+                  field:
+                    input_type: text
+                    antlers: false
+                    type: text
+                    display: Header
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                -
+                  handle: first_col
+                  field:
+                    buttons:
+                      - h2
+                      - h3
+                      - bold
+                      - italic
+                      - unorderedlist
+                      - orderedlist
+                      - removeformat
+                      - quote
+                      - anchor
+                      - image
+                      - table
+                      - h1
+                      - h4
+                      - underline
+                      - strikethrough
+                    smart_typography: false
+                    save_html: false
+                    inline: false
+                    toolbar_mode: fixed
+                    reading_time: false
+                    word_count: false
+                    fullscreen: true
+                    allow_source: true
+                    enable_input_rules: true
+                    enable_paste_rules: true
+                    remove_empty_nodes: false
+                    antlers: false
+                    link_noopener: false
+                    link_noreferrer: false
+                    target_blank: false
+                    sets:
+                      new_set_group:
+                        display: 'New Set Group'
+                        instructions: null
+                        icon: null
+                        sets:
+                          image:
+                            display: Image
+                            instructions: null
+                            icon: null
+                            fields:
+                              -
+                                import: image
+                          video:
+                            display: Video
+                            instructions: null
+                            icon: null
+                            fields:
+                              -
+                                import: video
+                          cta:
+                            display: CTA
+                            instructions: null
+                            icon: null
+                            fields:
+                              -
+                                import: cta
+                    always_show_set_button: false
+                    collapse: false
+                    previews: true
+                    type: bard
+                    display: 'First col'
+                    width: 33
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                -
+                  handle: second_col
+                  field:
+                    buttons:
+                      - h2
+                      - h3
+                      - bold
+                      - italic
+                      - unorderedlist
+                      - orderedlist
+                      - removeformat
+                      - quote
+                      - anchor
+                      - image
+                      - table
+                      - h1
+                      - h4
+                      - underline
+                      - strikethrough
+                    smart_typography: false
+                    save_html: false
+                    inline: false
+                    toolbar_mode: fixed
+                    reading_time: false
+                    word_count: false
+                    fullscreen: true
+                    allow_source: true
+                    enable_input_rules: true
+                    enable_paste_rules: true
+                    remove_empty_nodes: false
+                    antlers: false
+                    link_noopener: false
+                    link_noreferrer: false
+                    target_blank: false
+                    sets:
+                      new_set_group:
+                        display: 'New Set Group'
+                        instructions: null
+                        icon: null
+                        sets:
+                          image:
+                            display: Image
+                            instructions: null
+                            icon: null
+                            fields:
+                              -
+                                import: image
+                          video:
+                            display: Video
+                            instructions: null
+                            icon: null
+                            fields:
+                              -
+                                import: video
+                          cta:
+                            display: CTA
+                            instructions: null
+                            icon: null
+                            fields:
+                              -
+                                import: cta
+                    always_show_set_button: false
+                    collapse: false
+                    previews: true
+                    type: bard
+                    display: 'Second col'
+                    width: 33
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                -
+                  handle: third_col
+                  field:
+                    buttons:
+                      - h2
+                      - h3
+                      - bold
+                      - italic
+                      - unorderedlist
+                      - orderedlist
+                      - removeformat
+                      - quote
+                      - anchor
+                      - image
+                      - table
+                      - h1
+                      - h4
+                      - underline
+                      - strikethrough
+                    smart_typography: false
+                    save_html: false
+                    inline: false
+                    toolbar_mode: fixed
+                    reading_time: false
+                    word_count: false
+                    fullscreen: true
+                    allow_source: true
+                    enable_input_rules: true
+                    enable_paste_rules: true
+                    remove_empty_nodes: false
+                    antlers: false
+                    link_noopener: false
+                    link_noreferrer: false
+                    target_blank: false
+                    sets:
+                      new_set_group:
+                        display: 'New Set Group'
+                        instructions: null
+                        icon: null
+                        sets:
+                          image:
+                            display: Image
+                            instructions: null
+                            icon: null
+                            fields:
+                              -
+                                import: image
+                          video:
+                            display: Video
+                            instructions: null
+                            icon: null
+                            fields:
+                              -
+                                import: video
+                          cta:
+                            display: CTA
+                            instructions: null
+                            icon: null
+                            fields:
+                              -
+                                import: cta
+                    always_show_set_button: false
+                    collapse: false
+                    previews: true
+                    type: bard
+                    display: 'Third col'
+                    width: 33
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+            video_panel:
+              display: 'Video Panel'
+              instructions: null
+              icon: null
+              fields:
+                -
+                  import: video_panel
+            image_panel:
+              display: 'Image Panel'
+              instructions: null
+              icon: null
+              fields:
+                -
+                  import: image_panel
+            centered_col:
+              display: 'Centered col'
+              instructions: null
+              icon: null
+              fields:
+                -
+                  handle: text
+                  field:
+                    restrict: false
+                    buttons:
+                      - bold
+                      - italic
+                      - unorderedlist
+                      - orderedlist
+                      - quote
+                      - link
+                      - image
+                      - table
+                    automatic_line_breaks: true
+                    automatic_links: false
+                    escape_markup: false
+                    heading_anchors: false
+                    smartypants: false
+                    table_of_contents: false
+                    antlers: false
+                    type: markdown
+                    display: Text
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                    width: 75
+                -
+                  handle: background_image
+                  field:
+                    mode: list
+                    container: assets
+                    restrict: false
+                    allow_uploads: true
+                    show_filename: true
+                    show_set_alt: true
+                    type: assets
+                    display: 'Background image'
+                    width: 25
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+      type: replicator
+      display: 'Flexible content'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
