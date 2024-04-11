@@ -8,3 +8,22 @@
     {{ partial:flexible_content }}
 </section>
 {{ /flexible_content }}
+<section>
+    <ul>
+        {{ users group="leiding" }}
+        <li>
+            <h2>{{ name }}</h2>
+        </li>
+        {{ /users }}
+    </ul>
+</section>
+<section>
+    <ul>
+        {{ collection:bannen }}
+        <li>
+            <h2>{{ title }}</h2>
+            <p>{{ content }}</p>
+        </li>
+        {{ /collection:bannen }}
+    </ul>
+</section>
