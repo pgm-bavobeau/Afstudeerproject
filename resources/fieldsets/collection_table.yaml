@@ -1,0 +1,14 @@
+title: 'Collection Table'
+fields:
+  -
+    handle: collection
+    field:
+      max_items: 1
+      mode: default
+      type: collections
+      display: Collection
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false

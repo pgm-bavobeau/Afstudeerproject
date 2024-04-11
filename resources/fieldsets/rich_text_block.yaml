@@ -87,6 +87,13 @@ fields:
               fields:
                 -
                   import: user_group
+            collection_table:
+              display: 'Collection Table'
+              instructions: null
+              icon: null
+              fields:
+                -
+                  import: collection_table
       always_show_set_button: false
       collapse: false
       previews: true
