@@ -1,0 +1,42 @@
+<section>
+    <section>
+        <ul>
+            {{ users group="leiding" role="bondsleider" }}
+            <li>
+                <h3>Naam: {{ name }}</h3>
+                <p>Email: {{ email }}</p>
+            </li>
+            {{ /users }}
+
+            {{ users group="leiding" role="bondsleiding" }}
+            <li>
+                <h3>Naam: {{ name }}</h3>
+                <p>Email: {{ email }}</p>
+            </li>
+            {{ /users }}
+
+            {{ users group="leiding" role="uniform" role:isnt="bondsleider" role:isnt="bondsleiding" }} 
+            <li>
+                <h3>Naam: {{ name }}</h3>
+                <p>Email: {{ email }}</p>
+            </li>
+            {{ /users }}
+        </ul>
+    </section>
+    <section>
+        <ul>
+            {{ users group="leiding" }}
+
+            {{ if users | is_empty }}
+            <p>geen</p>
+            {{ else }}
+            <li>
+                <h3>Naam: {{ name }}</h3>
+                <p>Email: {{ email }}</p>
+            </li>
+            {{ /if }}
+
+            {{ /users }}
+        </ul>
+    </section>
+</section>

@@ -20,25 +20,26 @@ tabs:
               antlers: false
               type: text
               display: Header
+              instructions: 'When you want a different title showing then the page name.'
               listable: hidden
               instructions_position: above
               visibility: visible
               replicator_preview: true
               hide_display: false
           -
-            handle: subheader
+            handle: subtitle
             field:
               input_type: text
               antlers: false
               type: text
-              display: Subheader
+              display: subtitle
               listable: hidden
               instructions_position: above
               visibility: visible
               replicator_preview: true
               hide_display: false
           -
-            handle: background_image
+            handle: featured_image
             field:
               mode: list
               container: assets
@@ -47,12 +48,13 @@ tabs:
               show_filename: true
               show_set_alt: true
               type: assets
-              display: 'Background image'
+              display: 'Featured Image'
               listable: hidden
               instructions_position: above
               visibility: visible
               replicator_preview: true
               hide_display: false
+              max_files: 1
       -
         display: Content
         fields:
