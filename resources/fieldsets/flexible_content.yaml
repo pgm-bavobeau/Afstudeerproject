@@ -557,6 +557,105 @@ fields:
               fields:
                 -
                   import: user_group
+            3_cards:
+              display: '3 Cards'
+              instructions: null
+              icon: null
+              fields:
+                -
+                  handle: first_card
+                  field:
+                    fields:
+                      -
+                        import: image_card
+                    fullscreen: false
+                    type: group
+                    display: 'First card'
+                    width: 33
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                -
+                  handle: second_card
+                  field:
+                    fields:
+                      -
+                        import: image_card
+                    fullscreen: false
+                    type: group
+                    display: 'Second card'
+                    width: 33
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                -
+                  handle: third_card
+                  field:
+                    fields:
+                      -
+                        import: image_card
+                    fullscreen: false
+                    type: group
+                    display: 'Third card'
+                    width: 33
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+            3_cards_collection:
+              display: '3 Cards Collection'
+              instructions: null
+              icon: null
+              fields:
+                -
+                  handle: first_card
+                  field:
+                    max_items: 1
+                    mode: default
+                    type: collections
+                    display: 'First card'
+                    instructions: 'When choosing a collection the next upcoming entry will be shown in a card. For events that would be the upcoming event in its entries. if not using events use 3 Cards without collection.'
+                    width: 33
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                -
+                  handle: second_card
+                  field:
+                    fields:
+                      -
+                        import: image_card
+                    fullscreen: false
+                    type: group
+                    display: 'Second card'
+                    width: 33
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                -
+                  handle: third_card
+                  field:
+                    fields:
+                      -
+                        import: image_card
+                    fullscreen: false
+                    type: group
+                    display: 'Third card'
+                    width: 33
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
       type: replicator
       display: 'Flexible content'
       listable: hidden

@@ -5,10 +5,27 @@ layout: home
 title: 'KSA Sint-Lieven Jongens'
 author: 5f3ca023-efc0-4cf9-bfa2-5f2951f37174
 updated_by: 5f3ca023-efc0-4cf9-bfa2-5f2951f37174
-updated_at: 1712863678
+updated_at: 1712866929
 parent: home
 template: templates/home
 flexible_content:
+  -
+    id: luvoppc7
+    first_card: events
+    second_card:
+      title: 'Online Inschrijven!'
+      subtitle: 'Word lid van KSA!'
+      card_background: {  }
+      card_link_title: null
+      card_link: null
+    third_card:
+      title: Landsknecht
+      subtitle: 'Ontdek het programma'
+      card_background: {  }
+      card_link_title: null
+      card_link: null
+    type: 3_cards_collection
+    enabled: true
   -
     id: lupjvegi
     panels:
