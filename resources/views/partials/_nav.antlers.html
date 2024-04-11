@@ -10,7 +10,13 @@ This is the default navigation partial.
         </ul>
     </nav>
     <div>
-        <h1>{{ header }}</h1>
-        <h2>{{ subheader }}</h2>
+        {{ if header }}
+            <h1>{{ header }}</h1>
+        {{ else }}
+            <h1>{{ title }}</h1>
+        {{ /if }}
+        {{ if subtitle }}
+            <h2>{{ subtitle }}</h2>
+        {{ /if }}
     </div>
 </header>

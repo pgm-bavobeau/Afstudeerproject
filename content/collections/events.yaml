@@ -1,0 +1,17 @@
+title: 'Events Articles'
+template: events/show
+layout: layout
+mount: edf97461-7ff6-4cf5-b2c9-b31fdb0bdb2d
+revisions: false
+route: '/{{mount}}/{{slug}}'
+date: true
+sort_dir: asc
+default_status: draft
+date_behavior:
+  past: private
+  future: public
+preview_targets:
+  -
+    label: Entry
+    url: '{permalink}'
+    refresh: true

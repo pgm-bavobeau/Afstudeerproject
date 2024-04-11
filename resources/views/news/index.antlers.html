@@ -1,0 +1,25 @@
+<section>
+    <ul>
+        {{ collection:news }}
+        <li>
+            <a href="{{ url }}">{{ title }}</a>
+            <p>{{ date }}</p>
+            <p>{{ article_content }}</p>
+            <p>{{ author:name }}</p>
+        </li>
+        {{ /collection:news }}
+    </ul>
+</section>
+<aside>
+    <ul>
+        {{ collection:events }}
+        <li>
+            <a href="{{ url }}">{{ title }}</a>
+            <p>{{ date }}</p>
+            <p>{{ event_content }}</p>
+            <p>{{ author:name }}</p>
+        </li>
+        {{ /collection:events }}
+    </ul>
+</aside>
+    
