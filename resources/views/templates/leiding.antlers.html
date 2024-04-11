@@ -25,7 +25,7 @@
     </section>
     <section>
         <ul>
-            {{ users group="leiding" }}
+            {{ users group="leiding" groupBy="group" }}
 
             {{ if users | is_empty }}
             <p>geen</p>

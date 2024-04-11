@@ -1,0 +1,13 @@
+title: 'User Group'
+fields:
+  -
+    handle: user_groups_field
+    field:
+      mode: default
+      type: user_groups
+      display: 'User Groups Field'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false

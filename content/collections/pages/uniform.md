@@ -3,7 +3,7 @@ id: cb945c06-7a56-417d-8176-8f72686f40c4
 blueprint: page
 title: Uniform
 updated_by: 5f3ca023-efc0-4cf9-bfa2-5f2951f37174
-updated_at: 1712777278
+updated_at: 1712853761
 parent: 4bb0bd53-5ba2-4801-bad4-a5b392de59f1
 flexible_content:
   -
@@ -23,6 +23,14 @@ flexible_content:
           -
             type: text
             text: 'De uniformdienst zal elke week zijn kraam uitstallen voor en na de vergadering, in het materiaalkot. Moest er niemand van uniform aanwezig zijn aan het materiaalkot kan u altijd iemand van uniform aanspreken en doen wij dit met veel plezier voor u open. Meer info over het uniform kan u vragen bij de uniformverantwoordelijken, die vindt u hieronder (klik op foto voor contactgegevens).'
+      -
+        type: set
+        attrs:
+          id: luvgolls
+          values:
+            type: user_group
+            user_groups_field:
+              - uniform
       -
         type: paragraph
       -
