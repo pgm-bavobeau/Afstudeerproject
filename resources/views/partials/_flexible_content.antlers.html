@@ -1,28 +1,6 @@
 {{ if type == 'panel_group' }}
 {{ panels }}
-    <h2>{{ panel_title }}</h2>
-    <div class="grid grid-cols-2 gap-8 pb-12">
-        <div class="relative {{ index % 2 ?= 'order-last' }}">
-            {{ if panel_image }}
-            {{ panel_image }}
-            <img src="{{ url }}" alt="{{ alt }}" />
-            {{ /panel_image}}
-            {{ /if }} {{ if panel_video }}
-            <iframe
-                src="{{ panel_video}}"
-                frameborder="0"
-                gesture="media"
-                allow="encrypted-media"
-                allowfullscreen
-            ></iframe>
-            {{ /if }}
-        </div>
-        <div>
-            <h3>{{ panel_subtitle }}</h3>
-            <p>{{ panel_text }}</p>
-            <a href="{{ cta_link }}">{{ cta_text }}</a>
-        </div>
-    </div>
+    {{ partial:panel }}
 {{ /panels }}
 {{ elseif type == 'full' }}
 {{ if header }}
@@ -81,4 +59,14 @@
         {{ text }}
     </div>
 </div>
+{{ elseif type == 'video_panel' }}
+    {{ partial:panel }}
+{{ elseif type == 'image_panel' }}
+    {{ partial:panel }}
+{{ elseif type == 'user_carousel' }}
+    <ul>
+        {{ user_groups_field }} {{ users group="{handle}" }}
+        <li>{{ name }}</li>
+        {{ /users }} {{ /user_groups_field }}
+    </ul>
 {{ /if }}

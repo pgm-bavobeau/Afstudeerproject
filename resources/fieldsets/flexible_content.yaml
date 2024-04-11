@@ -550,6 +550,13 @@ fields:
                     visibility: visible
                     replicator_preview: true
                     hide_display: false
+            user_carousel:
+              display: 'User Carousel'
+              instructions: null
+              icon: null
+              fields:
+                -
+                  import: user_group
       type: replicator
       display: 'Flexible content'
       listable: hidden

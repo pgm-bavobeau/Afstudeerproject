@@ -5,7 +5,7 @@ layout: home
 title: 'KSA Sint-Lieven Jongens'
 author: 5f3ca023-efc0-4cf9-bfa2-5f2951f37174
 updated_by: 5f3ca023-efc0-4cf9-bfa2-5f2951f37174
-updated_at: 1712504910
+updated_at: 1712863239
 parent: home
 template: templates/home
 flexible_content:
@@ -337,5 +337,11 @@ flexible_content:
             type: text
             text: ' kan je de integrale visie en missie lezen.'
     type: fifty_fifty
+    enabled: true
+  -
+    id: luvmjdpk
+    user_groups_field:
+      - leiding
+    type: user_carousel
     enabled: true
 ---
