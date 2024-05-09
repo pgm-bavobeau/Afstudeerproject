@@ -4,9 +4,17 @@ This is the navigation for the home page.
 <header>
     <nav>
         <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/contact">Contact</a></li>
+            <div>Logo</div>
+            {{ nav:collection:pages }}
+            {{ if first }}
+                <li><a href="{{ url }}">Home</a></li>
+            {{ /if}}
+            {{ if children }}
+                {{ children }}
+                    <li><a href="{{ url }}">{{title}}</a></li>
+                {{ /children }}
+            {{ /if }}
+            {{ /nav:collection:pages }}
         </ul>
     </nav>
     <div>
