@@ -1,0 +1,17 @@
+<ul>
+{{ if type == '3_cards_collection' }}
+    {{ first_card }}
+        {{ partial:card_collection }}
+    {{ /first_card }}
+{{ else }}
+    {{ first_card }}
+        {{ partial:card }}
+    {{ /first_card }}
+{{ /if }}
+{{ second_card }}
+    {{ partial:card }}  
+{{ /second_card }}
+{{ third_card }}
+    {{ partial:card }}
+{{ /third_card }}
+</ul>

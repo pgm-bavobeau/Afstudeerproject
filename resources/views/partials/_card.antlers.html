@@ -1,0 +1,14 @@
+<li>
+    <a href="{{ card_link }}">
+        {{ if card_link_title }}
+            {{ card_link_title }}
+        {{ /if }}
+    </a>
+    <h2>{{ title }}</h2>
+    <h3>{{ subtitle }}</h3>
+    {{ if card_background }}
+        {{ card_background }}
+            <img src="{{ url }}" alt="{{ alt }}" />
+        {{ /card_background }}
+    {{ /if }}
+</li>
