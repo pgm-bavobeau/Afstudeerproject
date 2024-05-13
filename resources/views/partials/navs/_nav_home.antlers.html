@@ -5,16 +5,13 @@ This is the navigation for the home page.
     <nav>
         <ul>
             <div>Logo</div>
-            {{ nav:collection:pages }}
+            {{ nav:main_nav_jongens include_home="true" }}
             {{ if first }}
                 <li><a href="{{ url }}">Home</a></li>
-            {{ /if}}
-            {{ if children }}
-                {{ children }}
-                    <li><a href="{{ url }}">{{title}}</a></li>
-                {{ /children }}
+            {{ else }}
+                <li><a href="{{ url }}">{{title}}</a></li>
             {{ /if }}
-            {{ /nav:collection:pages }}
+            {{ /nav:main_nav_jongens }}
         </ul>
     </nav>
     <div>
