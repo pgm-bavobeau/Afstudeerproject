@@ -1,0 +1,69 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          - 
+            handle: title
+            field:
+              type: text
+              display: Title
+              listable: hidden
+          - 
+            handle: event
+            field:
+              type: text
+              display: Event Name
+              listable: hidden
+              validate: 
+                - required
+          - 
+            handle: name
+            field:
+              type: text
+              display: Name
+              validate: 
+                - required
+          - 
+            handle: email
+            field:
+              type: text
+              display: Email
+              validate: 
+                - required
+                - email
+          - 
+            handle: phone
+            field:
+              type: text
+              display: Phone
+          - 
+            handle: reservation_details
+            field:
+              type: grid
+              display: Reservation Details
+              fields:
+                - 
+                  handle: option
+                  field:
+                    type: text
+                    display: Option
+                - 
+                  handle: quantity
+                  field:
+                    type: integer
+                    display: Quantity
+                - 
+                  handle: price
+                  field:
+                    type: float
+                    display: Price
+          -
+            handle: total_price
+            field:
+              type: float
+              display: Total Price
+              listable: hidden
+              validate: 
+                - required

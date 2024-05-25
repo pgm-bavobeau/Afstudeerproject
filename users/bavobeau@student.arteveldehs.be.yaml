@@ -10,3 +10,17 @@ preferences:
       columns:
         - title
         - price
+    reservations:
+      columns:
+        - title
+        - name
+        - reservation_date
+        - total_price
+  forms:
+    reservation:
+      columns:
+        - title
+        - event
+        - name
+        - total_price
+        - datestamp

@@ -4,3 +4,9 @@
     <p>{{ author:name }}</p>
     {{ event_content }}
 </section>
+<section>
+    {{ if enable_reservations }}
+        <h2>Reserve your spot</h2>
+        {{ partial:forms/reservation_form id="{{ id }}" reservation_fields="{{ reservation_fields }}" }}
+    {{ /if }}
+</section>

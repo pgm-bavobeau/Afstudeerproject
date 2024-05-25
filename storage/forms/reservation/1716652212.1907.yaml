@@ -1,0 +1,16 @@
+title: "annual charity gala - John Doe"
+event: 'First event'
+name: dog
+email: editor@test.be
+phone: '0484 57 46 67'
+reservation_details:
+  - option: "Chicken"
+    quantity: 2
+    price: 20
+  - option: "Vegetarian"
+    quantity: 1
+    price: 18
+  - option: "Donation"
+    quantity: 1
+    price: 50
+total_price: 108

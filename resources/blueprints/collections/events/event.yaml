@@ -25,6 +25,19 @@ tabs:
               replicator_preview: true
               hide_display: false
           -
+            handle: location
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: Location
+              width: 75
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
             handle: author
             field:
               type: users
@@ -32,6 +45,7 @@ tabs:
               default: current
               localizable: true
               max_items: 1
+              width: 25
           -
             handle: event_content
             field:
@@ -67,6 +81,142 @@ tabs:
               previews: true
               type: bard
               display: 'Event Content'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+      -
+        display: Reservations
+        fields:
+          -
+            handle: enable_reservations
+            field:
+              default: false
+              type: toggle
+              display: 'Enable reservations'
+              width: 50
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: max_reservations
+            field:
+              type: integer
+              display: 'Max reservations'
+              instructions: 'if empty unlimited'
+              width: 50
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: reservation_fields
+            field:
+              fields:
+                -
+                  handle: label
+                  field:
+                    input_type: text
+                    antlers: false
+                    type: text
+                    display: Label
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                -
+                  handle: type
+                  field:
+                    taggable: false
+                    push_tags: false
+                    multiple: false
+                    clearable: false
+                    searchable: false
+                    cast_booleans: false
+                    type: select
+                    display: Type
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                    options:
+                      Text: null
+                      number: null
+                      email: null
+                      select: null
+                      checkbox: null
+                -
+                  handle: options
+                  field:
+                    fields:
+                      -
+                        handle: label
+                        field:
+                          input_type: text
+                          antlers: false
+                          type: text
+                          display: Label
+                          listable: hidden
+                          instructions_position: above
+                          visibility: visible
+                          replicator_preview: true
+                          hide_display: false
+                      -
+                        handle: price
+                        field:
+                          type: float
+                          display: Price
+                          listable: hidden
+                          instructions_position: above
+                          visibility: visible
+                          replicator_preview: true
+                          hide_display: false
+                    mode: table
+                    reorderable: true
+                    fullscreen: true
+                    type: grid
+                    display: Options
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                    if:
+                      type: 'equals select'
+                -
+                  handle: required
+                  field:
+                    default: false
+                    type: toggle
+                    display: Required
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                -
+                  handle: price
+                  field:
+                    type: float
+                    display: Price
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                    if:
+                      type: 'not select'
+              mode: table
+              reorderable: true
+              fullscreen: true
+              type: grid
+              display: 'Reservation fields'
               listable: hidden
               instructions_position: above
               visibility: visible

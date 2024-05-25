@@ -1,0 +1,77 @@
+{{ form:create handle="reservation" redirect="/thank-you"  }}
+    <input type="hidden" name="event" id="event" value="{{ title }}">
+    <input type="hidden" name="title" id="title">
+    
+    <div>
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" required>
+    </div>
+    
+    <div>
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" required>
+    </div>
+    
+    <div>
+        <label for="phone">Phone:</label>
+        <input type="text" name="phone" id="phone">
+    </div>
+
+    <h3>Reservation Details</h3>
+    {{ foreach:reservation_fields as="field" }}
+    <div>
+        <label>{{ field:label }}{{ if field:price }} - €{{ field:price }}{{ /if }}</label>
+        {{ if field:type == 'select' }}
+            {{ foreach:field:options as="option" }}
+                <div>
+                    <p>{{ option:label }} - €{{ option:price }}</p>
+                    <label for="reservation_details[{{ option:label }}]">Quantity:</label>
+                    <input type="hidden" name="reservation_details[{{ key }}][option]" value="{{ option:label }}">
+                    <input type="number" name="reservation_details[{{ key }}][quantity]" id="reservation_details_{{ field:label }}_{{ option:label }}" data-price="{{ option:price }}" value="0" min="0" max="99">
+                    <input type="hidden" name="reservation_details[{{ key }}][price]" value="{{ option:price }}">
+                </div>
+            {{ /foreach:field:options }}
+        {{ else }}
+            <input type="{{ field:type }}" name="reservation_details[{{ key }}][option]" id="reservation_details_{{ field:label }}_{{ option:label }}" data-price="{{ field:price }}">
+            <input type="hidden" name="reservation_details[{{ key }}][price]" value="{{ field:price }}">
+        {{ /if }}
+    </div>
+    {{ /foreach:reservation_fields }}
+
+    <div>
+        <label>Total price: €<span id="total-price">0.00</span></label>
+        <input type="hidden" id="total_price_input" name="total_price" value="0">
+    </div>
+    
+    <button type="submit">Submit Reservation</button>
+{{ /form:create }}
+
+<script>
+    // Calculate total price
+    document.addEventListener('DOMContentLoaded', function() {
+        const calculateTotalPrice = () => {
+            let totalPrice = 0;
+            document.querySelectorAll('[data-price]').forEach(item => {
+                const price = parseFloat(item.dataset.price) || 0;
+                const quantity = (item.type === 'number' ? parseInt(item.value) : 1) || 0;
+                totalPrice += price * quantity;
+            });
+            document.getElementById('total-price').innerText = totalPrice.toFixed(2);
+            document.getElementById('total_price_input').value = totalPrice.toFixed(2);
+        };
+    
+        document.querySelectorAll('[data-price]').forEach(element => {
+            element.addEventListener('input', calculateTotalPrice);
+        });
+    
+        calculateTotalPrice();
+
+        // Generate title dynamically
+        const nameInput = document.getElementById('name');
+        const eventInput = document.getElementById('event');
+        const titleInput = document.getElementById('title');
+        nameInput.addEventListener('input', function() {
+            titleInput.value = `${eventInput.value} - ${nameInput.value}`;
+        });
+    });
+</script>
