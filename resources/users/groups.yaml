@@ -1,4 +1,16 @@
 leiding:
   title: Leiding
+bondsraad:
+  title: Bondsraad
+  roles:
+    - bondsraad
 uniform:
   title: Uniform
+  roles:
+    - uniform
+bondsleider:
+  title: Bondsleider
+  roles:
+    - bondsleider
+leeuwkes:
+  title: Leeuwkes

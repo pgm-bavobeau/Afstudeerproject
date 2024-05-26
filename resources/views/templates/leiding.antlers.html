@@ -1,42 +1,42 @@
 <section>
     <section>
+        <h2>Bestuur & uniform</h2>
         <ul>
-            {{ users group="leiding" role="bondsleider" }}
+            {{ users group="bondsleider" }}
+            <li>
+                <h3>Naam: {{ name }}</h3>
+                <p>Email: {{ email }}</p>
+            </li>
+            {{ /users }}
+    
+            
+            {{ users groups:contains="bondsraad" groups:doesnt_contain="bondsleider" }}
             <li>
                 <h3>Naam: {{ name }}</h3>
                 <p>Email: {{ email }}</p>
             </li>
             {{ /users }}
 
-            {{ users group="leiding" role="bondsleiding" }}
-            <li>
-                <h3>Naam: {{ name }}</h3>
-                <p>Email: {{ email }}</p>
-            </li>
-            {{ /users }}
-
-            {{ users group="leiding" role="uniform" role:isnt="bondsleider" role:isnt="bondsleiding" }} 
-            <li>
-                <h3>Naam: {{ name }}</h3>
-                <p>Email: {{ email }}</p>
-            </li>
+            {{ users groups:contains="uniform" groups:doesnt_contain="bondsraad" }}
+                <li>
+                    <h3>Naam: {{ name  }}</h3>
+                    <p>Email: {{ email }}</p>
+                </li>
             {{ /users }}
         </ul>
     </section>
     <section>
+        {{ collection:bannen }}
+        <h2>{{ title }}</h2>
         <ul>
-            {{ users group="leiding" groupBy="group" }}
-
-            {{ if users | is_empty }}
-            <p>geen</p>
-            {{ else }}
+            {{ users groups:contains="{{ title | lower }}" }}
             <li>
                 <h3>Naam: {{ name }}</h3>
                 <p>Email: {{ email }}</p>
             </li>
-            {{ /if }}
 
             {{ /users }}
         </ul>
+        {{ /collection:bannen }}
     </section>
 </section>
