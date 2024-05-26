@@ -2,6 +2,26 @@
     <input type="hidden" name="event" id="event" value="{{ title }}">
     <input type="hidden" name="title" id="title">
     
+    {{ if logged_in }}
+
+    <div>
+        <p>you are logged in as {{ current_user:name }}</p>
+    </div>
+
+    <div>
+        <input type="hidden" name="name" id="name" value="{{ current_user:name }}" required>
+    </div>
+
+    <div>
+        <input type="hidden" name="email" id="email" value="{{ current_user:email }}" required>
+    </div>
+
+    <div>
+        <input type="hidden" name="phone" id="phone" value="{{ current_user:phone }}">
+    </div>
+
+    {{ else }}
+
     <div>
         <label for="name">Name:</label>
         <input type="text" name="name" id="name" required>
@@ -16,6 +36,8 @@
         <label for="phone">Phone:</label>
         <input type="text" name="phone" id="phone">
     </div>
+
+    {{ /if }}
 
     <h3>Reservation Details</h3>
     {{ foreach:reservation_fields as="field" }}
