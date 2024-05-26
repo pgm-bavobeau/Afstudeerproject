@@ -1,6 +1,56 @@
-{{ logged_in }}
-
 {{ user }}
-    {{ name }}
-    {{ email }}
+{{ user:profile_form }}
+{{ if errors }}
+<div class="bg-red-300 text-white p-2">
+    {{ errors }}
+        {{ value }}<br>
+    {{ /errors }}
+</div>
+{{ /if }}
+
+{{ if success }}
+<div class="bg-green-300 text-white p-2">
+    {{ success }}<br>
+</div>
+{{ /if }}
+
+<label>Email</label>
+<input type="email" name="email" value="{{ old:email or email }}" />
+
+{{ user:in group="leiding" }}
+<label>Bio</label>
+<textarea name="bio">{{ old:bio or bio }}</textarea>
+{{ /user:in }}
+
+<button type="submit">Save</button>
+{{ /user:profile_form }}
+<h2>Verander wachtwoord</h2>
+{{ user:password_form }}
+ 
+    {{ if errors }}
+        <div class="bg-red-300 text-white p-2">
+            {{ errors }}
+                {{ value }}<br>
+            {{ /errors }}
+        </div>
+    {{ /if }}
+ 
+    {{ if success }}
+        <div class="bg-green-300 text-white p-2">
+            {{ success }}<br>
+        </div>
+    {{ /if }}
+ 
+    <label>Current Password</label>
+    <input type="password" name="current_password" />
+ 
+    <label>New Password</label>
+    <input type="password" name="password" />
+ 
+    <label>Confirm Password</label>
+    <input type="password" name="password_confirmation" />
+ 
+    <button type="submit">Save</button>
+ 
+{{ /user:password_form }}
 {{ /user }}
