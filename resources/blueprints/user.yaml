@@ -29,8 +29,35 @@ tabs:
               replicator_preview: true
               hide_display: false
           -
+            handle: bio
+            field:
+              antlers: false
+              type: textarea
+              display: Bio
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
             handle: avatar
             field:
               type: assets
               max_files: 1
               container: assets
+          -
+            handle: roles
+            field:
+              type: user_roles
+              mode: select
+              width: 50
+              listable: true
+              filterable: false
+          -
+            handle: groups
+            field:
+              type: user_groups
+              mode: select
+              width: 50
+              listable: true
+              filterable: false
