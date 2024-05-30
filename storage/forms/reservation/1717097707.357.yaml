@@ -1,0 +1,12 @@
+title: 'Football tournament - test'
+event: 'Football tournament'
+name: test
+email: user@test.be
+reservation_details:
+  -
+    option: oinik
+    quantity: 1
+    price: 30.0
+total_price: 30.0
+id: 6658d4eb5727f
+payment: pending

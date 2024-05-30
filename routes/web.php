@@ -2,6 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\MolliePaymentController;
+use App\Http\Controllers\ReservationController;
+use App\Http\Controllers\PaymentController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,3 +20,13 @@ use Illuminate\Support\Facades\Route;
 // Route::statamic('example', 'example-view', [
 //    'title' => 'Example'
 // ]);
+
+Route::post('/payment/create', [
+    MolliePaymentController::class, 'preparePayment'
+])->name('payment.create');
+Route::post('/webhooks/mollie', [
+    MolliePaymentController::class, 'handleWebHookNotification'
+])->name('webhooks.mollie');
+Route::get('/payment/success', [
+    MolliePaymentController::class, 'paymentSuccess'
+])->name('payment.success');
