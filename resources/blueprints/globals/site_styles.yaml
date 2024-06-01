@@ -1,0 +1,33 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        display: Logo
+        fields:
+          -
+            handle: header_logo
+            field:
+              container: assets
+              type: assets
+              display: 'Header logo'
+      -
+        display: Colors
+        fields:
+          -
+            handle: background_color
+            field:
+              type: color
+              display: 'Background Color'
+          -
+            handle: primary_color
+            field:
+              type: color
+              display: 'Primary Color'
+          -
+            handle: secondary_color
+            field:
+              type: color
+              display: 'Secondary Color'
+      -
+        display: Text

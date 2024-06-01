@@ -1,17 +1,7 @@
-<!DOCTYPE html>
-<html lang="nl">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>{{ title }}</title>
-        <link
-            href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
-            rel="stylesheet"
-        />
-    </head>
+{{ partial:html/head }}
     <body class="">
         {{ partial:navs/nav_home }}
-        <main class="container mx-auto py-8">{{ template_content }}</main>
+        <main class="container mx-auto py-8 bg-background ">{{ template_content }}</main>
         {{ partial:navs/footer }}
     </body>
-</html>
+{{ /partial:html/head }}

@@ -7,7 +7,7 @@ This is the navigation for the home page.
             <div>Logo</div>
             {{ nav:main_nav_jongens include_home="true" }}
             {{ if first }}
-                <li><a href="{{ url }}" class="{{ if is_current }} underline {{ /if }}">Home</a></li>
+                <li><a href="{{ url }}" class="{{ if is_current }} text-primary underline {{ /if }}">Home</a></li>
             {{ else }}
                 <li><a href="{{ url }}" class="{{ if is_current }} underline {{ /if }}">{{title}}</a></li>
             {{ /if }}

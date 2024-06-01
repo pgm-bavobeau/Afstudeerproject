@@ -9,7 +9,20 @@ export default {
     ],
 
     theme: {
-        extend: {},
+        colors: {
+            background: {
+                DEFAULT: 'var(--color-background)',
+            },
+            primary: {
+                DEFAULT: 'var(--color-primary)',
+            },
+            secondary: {
+                DEFAULT: 'var(--color-secondary)',
+            },
+            tertiary: {
+                DEFAULT: 'var(--color-tertiary)',
+            },
+        },
     },
 
     plugins: [
