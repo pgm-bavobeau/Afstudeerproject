@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Statamic\Facades\FormSubmission;
 use Mollie\Laravel\Facades\Mollie;
-use Statamic\Facades\Reservation;
 
 class MolliePaymentController extends Controller
 {
@@ -48,8 +48,16 @@ class MolliePaymentController extends Controller
 
     public function paymentSuccess(Request $request)
     {
-        dd($request->all());
-        $reservation = Reservation::findOrFail($id);
+        // cant edit form submissions, so we need to get the form submission and delete it and create a new one with the same data
+        $id = $request->id;
+        $reservation = FormSubmission::query()
+            ->where('form', 'reservation')
+            ->where('id', $id)
+            ->get();
+        $newReservation = FormSubmission::create()
+            ->data($reservation->data());
+        $newReservation->put('payment', 'completed');
+        $newReservation->save();
         return view('payment.success', compact('reservation'));
     }
 }

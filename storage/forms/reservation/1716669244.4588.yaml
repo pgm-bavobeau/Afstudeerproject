@@ -1,9 +1,0 @@
-title: 'Football tournament - Bavo Beaumon'
-event: 'Football tournament'
-name: 'Bavo Beaumon'
-email: bavobeau@student.arteveldehs.be
-reservation_details:
-  -
-    option: 'De beste'
-    price: 30.0
-total_price: 30.0

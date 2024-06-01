@@ -1,3 +1,5 @@
+hide: true
+title: Reservation
 tabs:
   main:
     display: Main
@@ -7,30 +9,34 @@ tabs:
           -
             handle: title
             field:
-              type: text
-              display: Title
+              type: hidden
+              required: false
           -
             handle: event
             field:
-              type: text
-              display: 'Event Name'
-              validate:
-                - required
+              max_items: 1
+              collections:
+                - events
+              type: entries
+              display: Event
+          -
+            handle: user
+            field:
+              max_items: 1
+              type: users
+              display: User
+              if:
+                email: 'not null'
           -
             handle: name
             field:
               type: text
               display: Name
-              validate:
-                - required
           -
             handle: email
             field:
               type: text
               display: Email
-              validate:
-                - required
-                - email
           -
             handle: phone
             field:
@@ -62,10 +68,25 @@ tabs:
             field:
               type: float
               display: 'Total Price'
-              validate:
-                - required
           -
             handle: payment
             field:
               type: text
               display: Payment
+          -
+            handle: created_at
+            field:
+              type: date
+              display: 'Created At'
+              time_enabled: true
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'

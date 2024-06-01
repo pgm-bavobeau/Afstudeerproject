@@ -1,8 +1,0 @@
-event: 'Football tournament'
-name: Bavo
-email: bavobeau@student.arteveldehs.be
-reservation_details:
-  -
-    option: 'Een team naam'
-    price: 30.0
-total_price: 30.0

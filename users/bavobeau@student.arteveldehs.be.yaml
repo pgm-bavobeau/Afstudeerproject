@@ -16,14 +16,6 @@ preferences:
     reservations:
       columns:
         - title
-        - name
-        - reservation_date
         - total_price
-  forms:
-    reservation:
-      columns:
-        - title
-        - event
-        - name
-        - total_price
-        - datestamp
+        - payment
+        - created_at

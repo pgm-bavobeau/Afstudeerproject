@@ -18,8 +18,7 @@
     
     {{ else }} 
     {{ form:reservation }}
-<input type="hidden" name="event" id="event" value="{{ title }}" />
-<input type="hidden" name="title" id="title" />
+<input type="hidden" name="event" id="event" value="{{ id }}" />
 
 {{ if logged_in }}
 
@@ -160,14 +159,6 @@
         });
 
         calculateTotalPrice();
-
-        // Generate title dynamically
-        const nameInput = document.getElementById("name");
-        const eventInput = document.getElementById("event");
-        const titleInput = document.getElementById("title");
-        nameInput.addEventListener("input", function () {
-            titleInput.value = `${eventInput.value} - ${nameInput.value}`;
-        });
     });
 </script>
 {{ /if }} {{ /form:set }}

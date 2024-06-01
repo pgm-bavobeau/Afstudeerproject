@@ -2,16 +2,9 @@
 
 namespace App\Listeners;
 
-use Statamic\Events\FormSaved;
-use Illuminate\Contracts\Queue\ShouldQueue;
-use Illuminate\Queue\InteractsWithQueue;
-use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Str;
 use Statamic\Events\FormSubmitted;
-use Statamic\Facades\Form;
-use Illuminate\Support\Facades\Redirect;
-
-use illuminate\http\Request;
-use Mollie\Laravel\Facades\Mollie;
+use Statamic\Facades\Entry;
 
 class ReservationFormListener
 {
@@ -30,12 +23,9 @@ class ReservationFormListener
     {
         // Check if the saved form is the one you want to redirect from
         if ($event->submission->form->handle === 'reservation') {
-            // handle the payment
-            // Create a Mollie payment
-            $id = uniqid();
+            $id = Str::orderedUuid();
             $data = $event->submission->data();
-            $data->put('id', $id);
-            $data->put('title', $data->get('event') . ' - ' . $data->get('name')); 
+            $data->put('payment_id', $id);
             // calculate total price
             $total = 0;
             for ($i = 0; $i < count($data->get('reservation_details')); $i++) {
@@ -43,6 +33,16 @@ class ReservationFormListener
             }
             $data->put('total_price', $total);
             $data->put('payment', 'pending');
+            $data->put('created_at', now()->format('Y-m-d H:i:s'));
+
+            // create a reservation entry in Reservations
+            $entry = Entry::make()
+                ->collection('reservations')
+                ->data($data)
+                ->published(true)
+                ->save();
+
+            return false;
         }
     }
 
