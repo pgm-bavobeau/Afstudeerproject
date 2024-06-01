@@ -69,3 +69,8 @@ tabs:
             field:
               type: text
               display: Payment
+          -
+            handle: payment_id
+            field:
+              type: text
+              display: 'Payment id'

@@ -5,12 +5,11 @@
         {{ form:submission }}
             <form action="/payment/create" method="post">
                 {{ csrf_field }}
-                <input type="hidden" name="id" value="{{ id }}" />
+                <input type="hidden" name="payment_id" value="{{ payment_id }}" />
                 <input type="hidden" name="total_price" value="{{ total_price }}" />
                 <input type="hidden" name="name" value="{{ name }}" />
                 <input type="hidden" name="email" value="{{ email }}" />
                 <input type="hidden" name="event" value="{{ event }}" />
-                <input type="hidden" name="title" value="{{ title }}" />
                 <button type="submit">Pay Now</button>
             </form>
         {{ /form:submission }}

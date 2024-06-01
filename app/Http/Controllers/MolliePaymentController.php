@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Statamic\Facades\FormSubmission;
+use Statamic\Facades\Entry;
 use Mollie\Laravel\Facades\Mollie;
 
 class MolliePaymentController extends Controller
@@ -17,10 +17,10 @@ class MolliePaymentController extends Controller
                 'value' => number_format($request->total_price, 2, '.', ''), // You must send the correct number of decimals, thus we enforce the use of strings
             ],
             'description' => 'Reservation for ' . $request->title,
-            'redirectUrl' => route('payment.success', ['id' => $request->id]),
+            'redirectUrl' => route('payment.success', ['id' => $request->payment_id]),
             // 'webhookUrl' => route('webhook.mollie'), // not able to test in local environment
             'metadata' => [
-                'order_id' => $request->id,
+                'order_id' => $request->payment_id,
             ],
         ]);
 
@@ -48,16 +48,13 @@ class MolliePaymentController extends Controller
 
     public function paymentSuccess(Request $request)
     {
-        // cant edit form submissions, so we need to get the form submission and delete it and create a new one with the same data
-        $id = $request->id;
-        $reservation = FormSubmission::query()
-            ->where('form', 'reservation')
-            ->where('id', $id)
-            ->get();
-        $newReservation = FormSubmission::create()
-            ->data($reservation->data());
-        $newReservation->put('payment', 'completed');
-        $newReservation->save();
+        // Get the reservation entry and update the payment status
+        $reservation = Entry::query()
+            ->where('collection', 'reservations')
+            ->where('payment_id', $request->id)
+            ->first();
+        $reservation->set('payment', 'paid');
+        $reservation->save();
         return view('payment.success', compact('reservation'));
     }
 }

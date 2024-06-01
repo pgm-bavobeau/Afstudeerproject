@@ -23,9 +23,7 @@ class ReservationFormListener
     {
         // Check if the saved form is the one you want to redirect from
         if ($event->submission->form->handle === 'reservation') {
-            $id = Str::orderedUuid();
             $data = $event->submission->data();
-            $data->put('payment_id', $id);
             // calculate total price
             $total = 0;
             for ($i = 0; $i < count($data->get('reservation_details')); $i++) {
@@ -33,6 +31,8 @@ class ReservationFormListener
             }
             $data->put('total_price', $total);
             $data->put('payment', 'pending');
+            $payment_id = Str::orderedUuid();
+            $data->put('payment_id', $payment_id->toString());
             $data->put('created_at', now()->format('Y-m-d H:i:s'));
 
             // create a reservation entry in Reservations

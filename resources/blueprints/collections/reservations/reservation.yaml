@@ -74,6 +74,11 @@ tabs:
               type: text
               display: Payment
           -
+            handle: payment_id
+            field:
+              type: text
+              display: Payment ID
+          -
             handle: created_at
             field:
               type: date
