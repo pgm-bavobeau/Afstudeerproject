@@ -5,7 +5,7 @@ layout: home
 title: 'KSA Sint-Lieven Jongens'
 author: 5f3ca023-efc0-4cf9-bfa2-5f2951f37174
 updated_by: 5f3ca023-efc0-4cf9-bfa2-5f2951f37174
-updated_at: 1717336151
+updated_at: 1717338824
 parent: home
 template: templates/home
 icon: /favicon.png
@@ -363,7 +363,5 @@ flexible_content:
     type: user_carousel
     enabled: true
 carousel:
-  - landing/cover.jpg
-  - logo/logo-sint-lieven-jongens-white.png
-  - logo/logosintlievenwhite.png
+  - covers/cover-home-1.jpg
 ---

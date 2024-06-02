@@ -34,24 +34,30 @@ This is the navigation for the home page.
         const images = document.querySelectorAll('.carousel');
         let currentImageIndex = 0;
 
-        function showImage(index) {
-            images.forEach((image, i) => {
-                image.classList.remove('opacity-100');
-                image.classList.add('opacity-0');
-                if (i === index) {
-                    image.classList.remove('opacity-0');
-                    image.classList.add('opacity-100');
-                }
-            });
-        }
+        if (images.length > 1) {
+            function showImage(index) {
+                images.forEach((image, i) => {
+                    image.classList.remove('opacity-100');
+                    image.classList.add('opacity-0');
+                    if (i === index) {
+                        image.classList.remove('opacity-0');
+                        image.classList.add('opacity-100');
+                    }
+                });
+            }
 
-        function nextImage() {
-            currentImageIndex = (currentImageIndex + 1) % images.length;
+            function nextImage() {
+                currentImageIndex = (currentImageIndex + 1) % images.length;
+                showImage(currentImageIndex);
+            }
+
+            // Initialize carousel
             showImage(currentImageIndex);
+            setInterval(nextImage, 5000); // Change image every 5 seconds
+        } else if (images.length === 1) {
+            // If there is only one image, make sure it is visible
+            images[0].classList.remove('opacity-0');
+            images[0].classList.add('opacity-100');
         }
-
-        // Initialize carousel
-        showImage(currentImageIndex);
-        setInterval(nextImage, 5000); // Change image every 5 seconds
     });
 </script>

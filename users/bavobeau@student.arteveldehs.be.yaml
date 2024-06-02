@@ -20,3 +20,5 @@ preferences:
         - total_price
         - payment
         - created_at
+    pages:
+      after_save: continue_editing
