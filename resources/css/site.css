@@ -25,14 +25,6 @@ h3 {
     text-transform: uppercase;
 }
 
-header {
-    color: var(--color-header-text);
-}
-
-.header__nav {
-    display: none;
-}
-
 main {
     background-color: var(--color-background);
 }

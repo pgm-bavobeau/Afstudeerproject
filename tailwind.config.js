@@ -20,6 +20,13 @@ export default {
             backgroundImage: {
                 'hero-image': 'var(--hero-image)',
             },
+            container: {
+                center: true,
+                padding: {
+                    xl: '5rem',
+                    '2xl': '6rem',
+                },   
+            }
         },
         colors: {
             background: {
@@ -33,6 +40,15 @@ export default {
             },
             tertiary: {
                 DEFAULT: 'var(--color-tertiary)',
+            },
+            header: {
+                DEFAULT: 'var(--color-header-text)',
+            },
+            title: {
+                DEFAULT: 'var(--color-title-text)',
+            },
+            text: {
+                DEFAULT: 'var(--color-text)',
             },
         },
     },
