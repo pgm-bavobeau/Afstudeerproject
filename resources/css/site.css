@@ -4,15 +4,33 @@
 
 /* This is all you. */
 * {
+    font-family: 'Barlow', sans-serif;
 }
 
 h1 {
     font-family: 'Octin Sports rg';
     color: var(--color-header-text);
+    text-transform: uppercase;
+}
+
+h2 {
+    font-family: 'Octin Sports rg';
+    color: var(--color-primary);
+    text-transform: uppercase;
+}
+
+h3 {
+    font-family: 'Octin Sports rg';
+    color: var(--color-primary);
+    text-transform: uppercase;
 }
 
 header {
     color: var(--color-header-text);
+}
+
+.header__nav {
+    display: none;
 }
 
 main {

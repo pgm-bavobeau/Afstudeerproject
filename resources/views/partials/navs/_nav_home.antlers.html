@@ -5,27 +5,30 @@ This is the navigation for the home page.
     {{ carousel}}
         <div class="carousel z-[-1] absolute w-full h-full bg-cover bg-center transition-opacity duration-1000 ease-in-out opacity-0" style="background-image: url('{{permalink}}');"></div>
     {{ /carousel }}
-    <nav class="container">
-        <ul>
+    <div class="container px-5 pt-10 flex justify-between bg-gradient-to-b from-black to-transparent bg-opacity-75">
+        <nav class="uppercase flex justify-between">
+            <div>
             {{ site_styles:header_logo }}
-            <li>
                 <a href="./">
-                    <img src="{{ url }}" alt="{{ alt }}" class="h-auto w-20">
+                    <img src="{{ url }}" alt="{{ alt }}" class="h-auto w-30">
                 </a>
-            </li>
             {{ /site_styles:header_logo }}
-            {{ nav:main_nav_jongens include_home="true" }}
-            {{ if first }}
-                <li><a href="{{ url }}" class="{{ if is_current }} underline {{ /if }}">Home</a></li>
-            {{ else }}
-                <li><a href="{{ url }}" class="{{ if is_current }} underline {{ /if }}">{{title}}</a></li>
-            {{ /if }}
-            {{ /nav:main_nav_jongens }}
-                <li><a href="{{ user:logout_url }}">Log out</a></li>
-        </ul>
-    </nav>
-    <div>
-        <h1>{{ title }}</h1>
+            </div>
+            <ul class="header__nav flex flex-row">
+                {{ nav:main_nav_jongens include_home="true" }}
+                {{ if first }}
+                    <li><a href="{{ url }}" class="{{ if is_current }} underline {{ /if }}">Home</a></li>
+                {{ else }}
+                    <li><a href="{{ url }}" class="{{ if is_current }} underline {{ /if }}">{{title}}</a></li>
+                {{ /if }}
+                {{ /nav:main_nav_jongens }}
+                    <li><a href="{{ user:logout_url }}">Log out</a></li>
+            </ul>
+        </nav>
+        <img src="./assets/icons/dropdown.png" alt="" class="hamburger w-8 h-auto">
+    </div>
+    <div class="container px-5 absolute top-auto bottom-12">
+        <h1 class="text-6xl break-normal">{{ title | replace(' ', '<br>') }}</h1>
     </div>
 </header>
 
