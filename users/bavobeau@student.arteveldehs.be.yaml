@@ -16,6 +16,7 @@ preferences:
     reservations:
       columns:
         - title
+        - event
         - total_price
         - payment
         - created_at

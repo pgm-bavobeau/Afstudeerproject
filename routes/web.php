@@ -27,6 +27,10 @@ Route::post('/payment/create', [
 Route::post('/webhooks/mollie', [
     MolliePaymentController::class, 'handleWebHookNotification'
 ])->name('webhooks.mollie');
-Route::get('/payment/success', [
+Route::statamic('/payment/success', 'success', [
     MolliePaymentController::class, 'paymentSuccess'
 ])->name('payment.success');
+Route::get('/payment/cancel', [
+    MolliePaymentController::class, 'paymentCancel'
+])->name('payment.cancel');
+

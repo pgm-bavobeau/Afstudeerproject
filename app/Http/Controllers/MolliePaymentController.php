@@ -55,6 +55,6 @@ class MolliePaymentController extends Controller
             ->first();
         $reservation->set('payment', 'paid');
         $reservation->save();
-        return view('payment.success', compact('reservation'));
+        return view('payment.success');
     }
 }
