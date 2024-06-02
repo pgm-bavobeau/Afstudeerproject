@@ -29,5 +29,25 @@ tabs:
             field:
               type: color
               display: 'Secondary Color'
+          -
+            handle: text_color
+            field:
+              type: color
+              display: 'Text color'
+          -
+            handle: header_text_color
+            field:
+              type: color
+              display: 'Header text color'
       -
         display: Text
+        fields:
+          -
+            handle: font
+            field:
+              max_files: 1
+              container: assets
+              folder: fonts
+              restrict: true
+              type: assets
+              display: Font

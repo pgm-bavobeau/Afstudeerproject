@@ -5,5 +5,12 @@
         --color-primary: {{ site_styles:primary_color }};
         --color-secondary: {{ site_styles:secondary_color }};
         --color-tertiary: {{ site_styles:tertiary_color }};
+        --color-text: {{ site_styles:text_color }};
+        --color-header-text: {{ site_styles:header_text_color }};
+    }
+
+    @font-face {
+        font-family: '{{ site_styles:font:alt }}';
+        src: url('{{ site_styles:font:permalink }}')
     }
 </style>

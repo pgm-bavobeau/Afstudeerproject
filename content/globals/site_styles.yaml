@@ -5,3 +5,6 @@ data:
   background_color: '#ffffff'
   primary_color: '#1060A9'
   secondary_color: '#ED7926'
+  text_color: '#000000'
+  header_text_color: '#ffffff'
+  font: 'fonts/octin sports rg.woff2'

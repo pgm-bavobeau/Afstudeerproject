@@ -4,9 +4,17 @@
 
 /* This is all you. */
 * {
-    
 }
 
 h1 {
-    
+    font-family: 'Octin Sports rg';
+    color: var(--color-header-text);
+}
+
+header {
+    color: var(--color-header-text);
+}
+
+main {
+    background-color: var(--color-background);
 }
