@@ -3,12 +3,18 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <title>{{ title }}</title>
         <link
             href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
             rel="stylesheet"
         />
         {{ vite src="/resources/js/site.js|resources/css/site.css" }}
+        {{ if icon }}
+            {{ icon | favicon }}
+        {{ else }}
+        <link rel="icon" type="image/x-icon" href="../favicon.png">
+        {{ /if }}
         {{ partial:theme/theme }}
     </head>
     {{ slot }}

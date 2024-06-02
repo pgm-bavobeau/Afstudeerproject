@@ -1,5 +1,7 @@
 title: 'Site Styles'
 data:
+  header_logo:
+    - logo/logo-sint-lieven-jongens-white.png
   background_color: '#ffffff'
   primary_color: '#1060A9'
   secondary_color: '#ED7926'

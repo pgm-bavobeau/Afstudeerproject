@@ -1,13 +1,22 @@
 <!--
 This is the navigation for the home page. 
 -->
-<header>
-    <nav>
+<header class="relative h-[350px] sm:h-[450px] w-full">
+    {{ carousel}}
+        <div class="carousel z-[-1] absolute w-full h-full bg-cover bg-center transition-opacity duration-1000 ease-in-out opacity-0" style="background-image: url('{{permalink}}');"></div>
+    {{ /carousel }}
+    <nav class="container">
         <ul>
-            <div>Logo</div>
+            {{ site_styles:header_logo }}
+            <li>
+                <a href="./">
+                    <img src="{{ url }}" alt="{{ alt }}" class="h-auto w-20">
+                </a>
+            </li>
+            {{ /site_styles:header_logo }}
             {{ nav:main_nav_jongens include_home="true" }}
             {{ if first }}
-                <li><a href="{{ url }}" class="{{ if is_current }} text-primary underline {{ /if }}">Home</a></li>
+                <li><a href="{{ url }}" class="{{ if is_current }} underline {{ /if }}">Home</a></li>
             {{ else }}
                 <li><a href="{{ url }}" class="{{ if is_current }} underline {{ /if }}">{{title}}</a></li>
             {{ /if }}
@@ -19,3 +28,30 @@ This is the navigation for the home page.
         <h1>{{ title }}</h1>
     </div>
 </header>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const images = document.querySelectorAll('.carousel');
+        let currentImageIndex = 0;
+
+        function showImage(index) {
+            images.forEach((image, i) => {
+                image.classList.remove('opacity-100');
+                image.classList.add('opacity-0');
+                if (i === index) {
+                    image.classList.remove('opacity-0');
+                    image.classList.add('opacity-100');
+                }
+            });
+        }
+
+        function nextImage() {
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+            showImage(currentImageIndex);
+        }
+
+        // Initialize carousel
+        showImage(currentImageIndex);
+        setInterval(nextImage, 5000); // Change image every 5 seconds
+    });
+</script>
