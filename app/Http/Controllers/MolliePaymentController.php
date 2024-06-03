@@ -18,7 +18,7 @@ class MolliePaymentController extends Controller
             ],
             'description' => 'Reservation for ' . $request->title,
             'redirectUrl' => route('payment.success', ['id' => $request->payment_id]),
-            // 'webhookUrl' => route('webhook.mollie'), // not able to test in local environment
+            'webhookUrl' => 'https://d2ec-193-191-137-219.ngrok-free.app/webhooks/mollie', // not able to test in local environment
             'metadata' => [
                 'order_id' => $request->payment_id,
             ],
@@ -41,20 +41,56 @@ class MolliePaymentController extends Controller
 
         if ($payment->isPaid()) {
             // Payment is paid and the funds are transferred.
+            $reservation = Entry::query()
+                ->where('collection', 'reservations')
+                ->where('payment_id', '=' , $payment->metadata->order_id)
+                ->first();
+            $reservation->set('payment', 'paid');
+            $reservation->save();
         } elseif (!$payment->isOpen()) {
             // The payment isn't paid and has expired.
+            $reservation = Entry::query()
+                ->where('collection', 'reservations')
+                ->where('payment_id', '=' , $payment->metadata->order_id)
+                ->first();
+            $reservation->set('payment', 'open');
+            $reservation->save();
+        } elseif ($payment->isCanceled()) {
+            // The payment has been canceled.
+            $reservation = Entry::query()
+                ->where('collection', 'reservations')
+                ->where('payment_id', '=' , $payment->metadata->order_id)
+                ->get();
+            $reservation->set('payment', 'canceled');
+            $reservation->save();
+        } elseif ($payment->isExpired()) {
+            // The payment has expired.
+            $reservation = Entry::query()
+                ->where('collection', 'reservations')
+                ->where('payment_id', '=' , $payment->metadata->order_id)
+                ->get();
+            $reservation->set('payment', 'expired');
+            $reservation->save();
+        } elseif ($payment->isFailed()) {
+            // The payment has failed.
+            $reservation = Entry::query()
+                ->where('collection', 'reservations')
+                ->where('payment_id', '=' , $payment->metadata->order_id)
+                ->get();
+            $reservation->set('payment', 'failed');
+            $reservation->save();
         }
     }
 
     public function paymentSuccess(Request $request)
     {
         // Get the reservation entry and update the payment status
-        $reservation = Entry::query()
-            ->where('collection', 'reservations')
-            ->where('payment_id', $request->id)
-            ->first();
-        $reservation->set('payment', 'paid');
-        $reservation->save();
+        // $reservation = Entry::query()
+        //     ->where('collection', 'reservations')
+        //     ->where('payment_id', $request->id)
+        //     ->first();
+        // $reservation->set('payment', 'paid');
+        // $reservation->save();
         return view('payment.success');
     }
 }
