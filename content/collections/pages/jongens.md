@@ -5,7 +5,7 @@ layout: home
 title: 'KSA Sint-Lieven Jongens'
 author: 5f3ca023-efc0-4cf9-bfa2-5f2951f37174
 updated_by: 5f3ca023-efc0-4cf9-bfa2-5f2951f37174
-updated_at: 1717338824
+updated_at: 1717446247
 parent: home
 template: templates/home
 icon: /favicon.png
@@ -16,15 +16,17 @@ flexible_content:
     second_card:
       title: 'Online Inschrijven!'
       subtitle: 'Word lid van KSA!'
-      card_background: {  }
-      card_link_title: null
-      card_link: null
+      card_background:
+        - covers/inschrijven.jpg
+      card_link_title: 'Online inschrijvingsformulier'
+      card_link: 'https://digit.ksa.be/5204/members/add/public'
     third_card:
       title: Landsknecht
       subtitle: 'Ontdek het programma'
-      card_background: {  }
-      card_link_title: null
-      card_link: null
+      card_background:
+        - covers/cover-landsknecht.jpg
+      card_link_title: Lees
+      card_link: 'entry::64054f22-a69f-4ea5-b983-3450007c3f8c'
     type: 3_cards_collection
     enabled: true
   -

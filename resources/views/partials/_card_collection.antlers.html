@@ -1,3 +1,10 @@
-<li>
-    <h2>{{ title }}</h2>
+{{ collection from="{{ handle }}" limit="1" }}
+<li class="last:md:col-span-2 last:lg:col-span-1 relative w-full">
+    <a href="{{ url }}" class="relative flex justify-end flex-col p-5 w-full h-56 bg-cover bg-center" {{ background_image }} style="background-image: url('{{permalink}}');" {{ /background_image }}>
+        <div class="w-full h-full absolute inset-0 bg-gradient-to-t from-[#00000080]"></div>
+        <h3 class="text-white relative leading-tight">{{ title }}</h3>
+        <h4 class="text-white relative">{{ date | iso_format("D MMMM YYYY") }}</h4>
+        <u class="text-white relative text">Meer info</u>
+    </a>
 </li>
+{{ /collection }}

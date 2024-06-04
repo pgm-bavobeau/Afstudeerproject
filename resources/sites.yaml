@@ -1,4 +1,4 @@
 default:
   name: '{{ config:app:name }}'
-  locale: en_US
+  locale: nl_BE
   url: /

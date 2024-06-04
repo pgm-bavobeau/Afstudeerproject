@@ -15,28 +15,14 @@ tabs:
           -
             handle: subtitle
             field:
-              input_type: text
-              antlers: false
               type: text
               display: Subtitle
-              listable: hidden
-              instructions_position: above
-              visibility: visible
-              replicator_preview: true
-              hide_display: false
           -
             handle: location
             field:
-              input_type: text
-              antlers: false
               type: text
               display: Location
               width: 75
-              listable: hidden
-              instructions_position: above
-              visibility: visible
-              replicator_preview: true
-              hide_display: false
           -
             handle: author
             field:
@@ -47,60 +33,29 @@ tabs:
               max_items: 1
               width: 25
           -
+            handle: background_image
+            field:
+              max_files: 1
+              min_files: 1
+              container: assets
+              folder: covers
+              type: assets
+              display: 'Background image'
+          -
             handle: event_content
             field:
-              buttons:
-                - h2
-                - h3
-                - bold
-                - italic
-                - unorderedlist
-                - orderedlist
-                - removeformat
-                - quote
-                - anchor
-                - image
-                - table
-              smart_typography: false
-              save_html: false
-              inline: false
-              toolbar_mode: fixed
-              reading_time: false
-              word_count: false
-              fullscreen: true
-              allow_source: true
-              enable_input_rules: true
-              enable_paste_rules: true
               remove_empty_nodes: false
-              antlers: false
-              link_noopener: false
-              link_noreferrer: false
-              target_blank: false
-              always_show_set_button: false
-              collapse: false
-              previews: true
               type: bard
               display: 'Event Content'
-              listable: hidden
-              instructions_position: above
-              visibility: visible
-              replicator_preview: true
-              hide_display: false
       -
         display: Reservations
         fields:
           -
             handle: enable_reservations
             field:
-              default: false
               type: toggle
               display: 'Enable reservations'
               width: 50
-              listable: hidden
-              instructions_position: above
-              visibility: visible
-              replicator_preview: true
-              hide_display: false
           -
             handle: max_reservations
             field:
@@ -108,14 +63,11 @@ tabs:
               display: 'Max reservations'
               instructions: 'if empty unlimited'
               width: 50
-              listable: hidden
-              instructions_position: above
-              visibility: visible
-              replicator_preview: true
-              hide_display: false
           -
             handle: reservation_fields
             field:
+              type: grid
+              display: 'Reservation fields'
               fields:
                 -
                   handle: label
@@ -212,16 +164,6 @@ tabs:
                     hide_display: false
                     if:
                       type: 'not select'
-              mode: table
-              reorderable: true
-              fullscreen: true
-              type: grid
-              display: 'Reservation fields'
-              listable: hidden
-              instructions_position: above
-              visibility: visible
-              replicator_preview: true
-              hide_display: false
   sidebar:
     display: Sidebar
     sections:
