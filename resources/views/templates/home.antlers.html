@@ -1,13 +1,11 @@
 {{ flexible_content }}
     {{ partial:flexible_content }}
 {{ /flexible_content }}
-<section>
-    <ul>
+<section class="container">
+    <h2>Bannen</h2>
+    <ul class="grid md:grid-cols-2 lg:grid-cols-3">
         {{ collection:bannen }}
-        <li>
-            <h2>{{ title }}</h2>
-            <p>{{ content }}</p>
-        </li>
+            {{ partial:components/group }}
         {{ /collection:bannen }}
     </ul>
 </section>
