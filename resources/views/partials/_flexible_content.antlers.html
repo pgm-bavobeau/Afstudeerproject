@@ -76,7 +76,7 @@
 {{ elseif type == 'user_carousel' }}
     <ul>
         {{ user_groups_field }} {{ users group="{handle}" }}
-        <li>{{ name }}</li>
+            {{ partial:components/small_person }}
         {{ /users }} {{ /user_groups_field }}
     </ul>
 {{ elseif type == '3_cards' }}
