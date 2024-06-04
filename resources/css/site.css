@@ -47,3 +47,20 @@ p {
 main {
     background-color: var(--color-background);
 }
+
+.text {
+    h4 {
+        margin-bottom: 0.75rem;
+    }
+    p {
+        margin-bottom: 0.75rem;
+        & a {
+            color: var(--color-secondary);
+            text-decoration: underline;
+            &:hover {
+                text-decoration: none;
+                cursor: pointer;
+            }
+        }
+    }
+}

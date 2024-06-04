@@ -5,7 +5,7 @@ layout: home
 title: 'KSA Sint-Lieven Jongens'
 author: 5f3ca023-efc0-4cf9-bfa2-5f2951f37174
 updated_by: 5f3ca023-efc0-4cf9-bfa2-5f2951f37174
-updated_at: 1717510588
+updated_at: 1717514049
 parent: home
 template: templates/home
 icon: /favicon.png
@@ -65,7 +65,7 @@ flexible_content:
       -
         type: heading
         attrs:
-          level: 3
+          level: 4
         content:
           -
             type: text
@@ -103,15 +103,11 @@ flexible_content:
           values:
             type: video
             video: 'https://www.youtube.com/embed/GG81djl47oY'
-      -
-        type: paragraph
-      -
-        type: paragraph
     third_col:
       -
         type: heading
         attrs:
-          level: 3
+          level: 4
         content:
           -
             type: text
@@ -122,8 +118,6 @@ flexible_content:
           id: luo7fp6m
           values:
             type: image
-      -
-        type: paragraph
       -
         type: paragraph
         content:
@@ -174,7 +168,7 @@ flexible_content:
       -
         type: heading
         attrs:
-          level: 3
+          level: 4
         content:
           -
             type: text
@@ -221,7 +215,7 @@ flexible_content:
       -
         type: heading
         attrs:
-          level: 3
+          level: 4
         content:
           -
             type: text
@@ -239,8 +233,6 @@ flexible_content:
           values:
             type: cta
             cta_text: 'Medische fiche'
-      -
-        type: paragraph
   -
     id: lupgruuh
     header: 'Het KSA-Lied!'

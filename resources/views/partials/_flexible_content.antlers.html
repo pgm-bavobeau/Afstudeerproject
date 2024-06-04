@@ -30,26 +30,28 @@
     </div>
 </div>
 {{ elseif type == '3_cols' }}
-{{ if header }}
-<h2>{{ header }}</h2>
-{{ /if }}
-<div class="grid grid-cols-3 gap-4">
-    <div>
-        {{ first_col }}
-        {{ partial:bard }}
-        {{ /first_col }}
-    </div>
-    <div>
-        {{ second_col }}
-        {{ partial:bard }}
-        {{ /second_col }}
-    </div>
-    <div>
-        {{ third_col }}
-        {{ partial:bard }}
-        {{ /third_col }}
-    </div>
-</div>
+<section class="container">
+    {{ if header }}
+    <h2>{{ header }}</h2>
+    {{ /if }}
+    <ul class="grid row-span-3 gap-8 md:grid-cols-2 md:row-sapn-2 lg:grid-cols-3 lg:grid-rows-1">
+        <li class="last:md:col-span-2 last:lg:col-span-1 relative w-full flex flex-col items-start">
+            {{ first_col }}
+            {{ partial:bard }}
+            {{ /first_col }}
+        </li>
+        <li class="last:md:col-span-2 last:lg:col-span-1 relative w-full flex flex-col items-start">
+            {{ second_col }}
+            {{ partial:bard }}
+            {{ /second_col }}
+        </li>
+        <li class="last:md:col-span-2 last:lg:col-span-1 relative w-full flex flex-col items-start">
+            {{ third_col }}
+            {{ partial:bard }}
+            {{ /third_col }}
+        </li>
+    </ul>
+</section>
 {{ elseif type == 'centered_col' }}
 <div class="">
     {{ if background_image }}
