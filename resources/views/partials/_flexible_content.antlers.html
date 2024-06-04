@@ -14,21 +14,23 @@
     {{ /full }}
 </div>
 {{ elseif type == 'fifty_fifty' }}
-{{ if header }}
-<h2>{{ header }}</h2>
-{{ /if }}
-<div class="grid grid-cols-2 gap-4">
-    <div>
-        {{ left }}
-        {{ partial:bard }}
-        {{ /left }}
-    </div>
-    <div>
-        {{ right }}
-        {{ partial:bard }}
-        {{ /right }}
-    </div>
-</div>
+<section class="container">
+    {{ if header }}
+    <h2>{{ header }}</h2>
+    {{ /if }}
+    <ul class="mt-4 grid gap-4 lg:grid-cols-2 lg:gap-10">
+        <li>
+            {{ left }}
+            {{ partial:bard }}
+            {{ /left }}
+        </li>
+        <li>
+            {{ right }}
+            {{ partial:bard }}
+            {{ /right }}
+        </li>
+    </ul>
+</section>
 {{ elseif type == '3_cols' }}
 <section class="container">
     {{ if header }}
