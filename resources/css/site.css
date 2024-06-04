@@ -64,3 +64,16 @@ main {
         }
     }
 }
+
+.centered_bg {
+    p {
+        color: white;
+        margin: 0.6rem 0;
+    }
+    h2 {
+        color: white;
+    }
+    div {
+
+    }
+}

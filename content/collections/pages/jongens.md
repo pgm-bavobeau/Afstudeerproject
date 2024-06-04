@@ -5,7 +5,7 @@ layout: home
 title: 'KSA Sint-Lieven Jongens'
 author: 5f3ca023-efc0-4cf9-bfa2-5f2951f37174
 updated_by: 5f3ca023-efc0-4cf9-bfa2-5f2951f37174
-updated_at: 1717514049
+updated_at: 1717516021
 parent: home
 template: templates/home
 icon: /favicon.png
@@ -256,6 +256,8 @@ flexible_content:
       Van je heidel diedel doedel diedel da.
     type: centered_col
     enabled: true
+    background_image:
+      - covers/cover-home-22.jpg
   -
     id: lupj9a26
     header: 'Onze visie en missie'

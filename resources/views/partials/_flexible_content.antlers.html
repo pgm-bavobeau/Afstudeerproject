@@ -53,16 +53,20 @@
     </ul>
 </section>
 {{ elseif type == 'centered_col' }}
-<div class="">
-    {{ if background_image }}
-        {{ background_image }}
-            <img src="{{ url }}" alt="{{ alt }}" />
-        {{ /background_image }}
-    {{ /if }}
-    <div>
-        {{ text }}
+{{ background_image }}
+<section 
+    class="centered_bg bg-cover bg-fixed mt-14 mb-5"
+    style="background-image: url('{{ permalink }}');"
+>
+{{ /background_image }}
+    <div 
+        class="flex justify-center items-center py-14 bg-[#302622d9]">
+        <div class="max-w-lg text-center">
+            {{ text }}
+        </div>
     </div>
-</div>
+</section>
+</section>
 {{ elseif type == 'video_panel' }}
     {{ partial:panel }}
 {{ elseif type == 'image_panel' }}
