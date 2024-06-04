@@ -53,12 +53,12 @@
     </ul>
 </section>
 {{ elseif type == 'centered_col' }}
-{{ background_image }}
 <section 
     class="centered_bg bg-cover bg-fixed mt-14 mb-5"
+    {{ background_image }}
     style="background-image: url('{{ permalink }}');"
+    {{ /background_image }}
 >
-{{ /background_image }}
     <div 
         class="flex justify-center items-center py-14 bg-[#302622d9]">
         <div class="max-w-lg text-center">
