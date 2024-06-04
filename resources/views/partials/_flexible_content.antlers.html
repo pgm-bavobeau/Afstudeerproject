@@ -1,7 +1,9 @@
 {{ if type == 'panel_group' }}
-{{ panels }}
-    {{ partial:panel }}
-{{ /panels }}
+<section class="container flex flex-col gap-8 sm:gap-12">
+    {{ panels }}
+        {{ partial:panel }}
+    {{ /panels }}
+</section>
 {{ elseif type == 'full' }}
 {{ if header }}
 <h2>{{ header }}</h2>

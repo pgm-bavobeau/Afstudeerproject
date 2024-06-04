@@ -5,7 +5,7 @@ layout: home
 title: 'KSA Sint-Lieven Jongens'
 author: 5f3ca023-efc0-4cf9-bfa2-5f2951f37174
 updated_by: 5f3ca023-efc0-4cf9-bfa2-5f2951f37174
-updated_at: 1717446247
+updated_at: 1717510588
 parent: home
 template: templates/home
 icon: /favicon.png
@@ -43,11 +43,14 @@ flexible_content:
         cta_text: 'Contacteer ons'
         type: video_panel
         enabled: true
+        cta_link: 'entry::00ad8add-6e65-49a8-9e47-b50d79bdce75'
       -
         id: lupjvms2
         panel_title: 'Algemene Info'
         panel_subtitle: Vergaderingen
         panel_text: |-
+          #### Vergaderingen
+
           De vergaderingen gaan door op **zaterdag van 14u00 tot 17u30**. Deze vinden steeds plaats op de **sportterreinen van het Sint-Lievenscollege**. De ingang bevindt zich in de Admiraaldreef op de grens van Sint-Amandsberg en Destelbergen.
 
           Wat er op het programma staat, kunt u terugvinden in ons programmaboekje, de Landsknecht. Indien we op andere uren vergadering hebben of op een andere locatie, zal dat vermeld staan in de Landsknecht.

@@ -1,23 +1,30 @@
-<h2>{{ panel_title }}</h2>
-    <div class="grid grid-cols-2 gap-8 pb-12">
-        <div class="relative {{ index % 2 ?= 'order-last' }}">
+<div class="grid gap-2">
+    <h2>{{ panel_title }}</h2>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-3 lg:gap-10">
+        <div class="{{ index % 2 ?= 'order-last' }} w-full h-full">
             {{ if panel_image }}
-            {{ panel_image }}
-            <img src="{{ url }}" alt="{{ alt }}" />
-            {{ /panel_image}}
-            {{ /if }} {{ if panel_video }}
-            <iframe
-                src="{{ panel_video}}"
-                frameborder="0"
-                gesture="media"
-                allow="encrypted-media"
-                allowfullscreen
-            ></iframe>
+                {{ panel_image }}
+                    <img src="{{ url }}" alt="{{ alt }}" />
+                {{ /panel_image}}
+            {{ /if }} 
+            {{ if panel_video }}
+                <iframe
+                    src="{{ panel_video}}"
+                    class="w-full h-auto aspect-video"
+                    frameborder="0"
+                    gesture="media"
+                    allow="encrypted-media"
+                    allowfullscreen
+                ></iframe>
             {{ /if }}
         </div>
-        <div>
-            <h3>{{ panel_subtitle }}</h3>
-            <p>{{ panel_text }}</p>
-            <a href="{{ cta_link }}">{{ cta_text }}</a>
+        <div class="flex flex-col items-start gap-3">
+            {{ if panel_text }}
+                {{ panel_text }}
+            {{ /if }}
+            {{ if cta_text }}
+                {{ partial:partials/components/cta }}
+            {{ /if }}
         </div>
     </div>
+</div>
