@@ -11,6 +11,13 @@ tabs:
               container: assets
               type: assets
               display: 'Header logo'
+          -
+            handle: header_logo_dark
+            field:
+              container: assets
+              folder: logo
+              type: assets
+              display: 'Header logo dark'
       -
         display: Colors
         fields:
@@ -19,26 +26,43 @@ tabs:
             field:
               type: color
               display: 'Background Color'
+              width: 50
+          -
+            handle: secondary_background_color
+            field:
+              type: color
+              display: 'Secondary background color'
+              width: 50
           -
             handle: primary_color
             field:
               type: color
               display: 'Primary Color'
+              width: 33
           -
             handle: secondary_color
             field:
               type: color
               display: 'Secondary Color'
+              width: 33
+          -
+            handle: tertiary_color
+            field:
+              type: color
+              display: 'Tertiary color'
+              width: 33
           -
             handle: text_color
             field:
               type: color
               display: 'Text color'
+              width: 33
           -
             handle: header_text_color
             field:
               type: color
               display: 'Header text color'
+              width: 33
       -
         display: Text
         fields:

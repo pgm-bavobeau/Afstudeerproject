@@ -54,7 +54,7 @@ main {
     }
     p {
         margin-bottom: 0.75rem;
-        & a {
+        a {
             color: var(--color-secondary);
             text-decoration: underline;
             &:hover {
@@ -72,8 +72,5 @@ main {
     }
     h2 {
         color: white;
-    }
-    div {
-
     }
 }

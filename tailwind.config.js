@@ -34,6 +34,9 @@ export default {
             background: {
                 DEFAULT: 'var(--color-background)',
             },
+            backgroundSecondary: {
+                DEFAULT: 'var(--color-background-secondary)',
+            },
             primary: {
                 DEFAULT: 'var(--color-primary)',
             },
@@ -51,6 +54,9 @@ export default {
             },
             text: {
                 DEFAULT: 'var(--color-text)',
+            },
+            footer: {
+                DEFAULT: 'var(--color-footer)',
             },
         },
     },

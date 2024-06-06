@@ -1,10 +1,37 @@
-<footer>
-    <p>&copy; 2021 Company, Inc.</p>
-    <nav>
-        <ul>
-            {{ nav:footer }}
-                <li><a href="{{ url }}">{{ title }}</a></li>
-            {{ /nav:footer }}
-        </ul>
-    </nav>
+<footer class="bg-backgroundSecondary">
+    <div class="container py-5">
+        <div class="flex flex-row justify-between items-center">
+            <div>
+                {{# Todo: change logo color #}}
+                <a href="./" class="">
+                    {{ site_styles:header_logo_dark }}
+                    <img src="{{ url }}" alt="{{ alt }}" class="h-auto w-28 sm:w-32 invert hover:invert-0">
+                    {{ /site_styles:header_logo_dark }}
+                </a>
+            </div>
+            <ul class="flex flex-row">
+                {{ nav:socials_jongens }}
+                <li class="ml-4 text-primary hover:text-background"><a href="{{ url }}"><i class="fab fa-{{ title | lower }} fa-2x w-full h-full"></i></a></li>
+                {{ /nav:socials_jongens }}
+            </ul>
+        </div>
+        <hr class="border-background my-5">
+        <div>
+            <nav>
+                <ul class="grid grid-cols-2">
+                    {{ nav:main_nav_jongens include_home="true" }}
+                    <li class="even:justify-self-end"><a href="{{ url }}" class="hover:underline hover:text-primary">{{ title }}</a></li>
+                    {{ /nav:main_nav_jongens }}
+                    {{ nav:footer }}
+                    <li class="even:justify-self-end"><a href="{{ url }}" class="hover:underline hover:text-primary">{{ title }}</a></li>
+                    {{ /nav:footer }}
+                </ul>
+            </nav>
+        </div>
+        <hr class="border-background my-5">
+        <div class="text-center">
+            <p>Copyright &copy; 2024 KSA Sint-Lieven</p>
+            <p>Website design by Michiel Blommaert. Website build by Bavo Beaumon</p>
+        </div>
+    </div>
 </footer>
