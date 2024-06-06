@@ -6,7 +6,8 @@ header: 'Nieuws & kalender'
 subheader: 'Alles over activiteiten'
 parent: 4bb0bd53-5ba2-4801-bad4-a5b392de59f1
 updated_by: 5f3ca023-efc0-4cf9-bfa2-5f2951f37174
-updated_at: 1712777246
+updated_at: 1717698861
 template: news/index
 subtitle: 'Alles over activiteiten'
+carousel: covers/cover-nieuws.jpg
 ---

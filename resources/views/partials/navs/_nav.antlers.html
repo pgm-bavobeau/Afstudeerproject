@@ -1,18 +1,96 @@
-<!--
-This is the default navigation partial. 
--->
-<header>
-    <nav>
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/contact">Contact</a></li>
-        </ul>
-    </nav>
-    <div>
-        <h1>
-            {{ header ?? title }}
-        </h1>
-        <h2>{{ subtitle }}</h2>
-    </div>
-</header>
+{{# <!--
+    This is the navigation for the home page. 
+    --> #}}
+    <header class="relative h-[350px] sm:h-[450px] w-full bg-gradient-to-b from-[#00000080]">
+        {{ carousel}}
+            <div class="carousel z-[-1] absolute w-full h-full bg-cover bg-center transition-opacity duration-1000 ease-in-out opacity-0" style="background-image: url('{{permalink}}');"></div>
+        {{ /carousel }}
+        <div class="container w-full flex justify-between xl:justify-normal pt-10">
+            <nav class="w-full flex justify-between flex-start">
+                <div>
+                {{ site_styles:header_logo }}
+                    <a href="./">
+                        <img src="{{ url }}" alt="{{ alt }}" class="h-auto w-28 sm:w-32">
+                    </a>
+                {{ /site_styles:header_logo }}
+                </div>
+                <ul id="nav-menu" class="uppercase hidden fixed z-20 text-nowrap pt-24 pb-5 xl:pt-0 flex-col xl:flex xl:flex-row xl:gap-12 xl:relative top-0 xl:top-auto left-0 xl:left-auto right-0 xl:right-auto bg-white xl:bg-transparent w-full xl:w-auto">
+                    {{ nav:main_nav_jongens include_home="true" }}
+                    {{ if first }}
+                        <li class="w-full"><a href="{{ url }}" class="text-black block text-base font-bold xl:font-normal py-4 xl:py-1 border-t xl:border-t-0 border-gray-100 m-auto {{ if is_current }} xl:border-b-2 xl:border-white xl:border-solid text-secondary {{ /if }} hover:text-secondary xl:text-header xl:hover:text-header xl:hover:border-b-2 xl:hover:border-white xl:hover:border-solid text-center">Home</a></li>
+                    {{ else }}
+                        <li class="w-full"><a href="{{ url }}" class="text-black block text-base font-bold xl:font-normal py-4 xl:py-1 border-t xl:border-t-0 border-gray-100 m-auto {{ if is_current }} xl:border-b-2 xl:border-white xl:border-solid text-secondary {{ /if }} hover:text-secondary xl:text-header xl:hover:text-header xl:hover:border-b-2 xl:hover:border-white xl:hover:border-solid text-center">{{title}}</a></li>
+                    {{ /if }}
+                    {{ /nav:main_nav_jongens }}
+                    {{ if logged_in }}
+                        <li class="w-full"><a href="{{ user:logout_url }}" class="xl:hidden text-black block text-base font-bold py-4 border-t border-gray-100 m-auto hover:text-secondary text-center">Log out</a></li>
+                    {{ /if logged_in }}
+                </ul>
+            </nav>
+            <img src="../assets/icons/dropdown.png" data-close-icon="../assets/icons/close.png" alt="" id="hamburger" class="relative z-20 box-content p-2.5 w-10 h-auto xl:hidden">
+        </div>
+        <div class="w-full top-10 sm:top-20 relative lg:text-center">
+            <div class="container">
+                <h1 class="text-4xl sm:text-5xl md:text-6xl">{{ title }}</h1>
+                <h3 class="text-header">{{ subtitle }}</h3>
+            </div>
+        </div>
+        <img src="../assets/icons/brush.png" alt="" class="absolute w-full bottom-0 left-0">
+    </header>
+    <div id="backdrop" class="fixed inset-0 bg-gray-900 bg-opacity-50 hidden z-10"></div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const images = document.querySelectorAll('.carousel');
+            let currentImageIndex = 0;
+    
+            if (images.length > 1) {
+                function showImage(index) {
+                    images.forEach((image, i) => {
+                        image.classList.remove('opacity-100');
+                        image.classList.add('opacity-0');
+                        if (i === index) {
+                            image.classList.remove('opacity-0');
+                            image.classList.add('opacity-100');
+                        }
+                    });
+                }
+    
+                function nextImage() {
+                    currentImageIndex = (currentImageIndex + 1) % images.length;
+                    showImage(currentImageIndex);
+                }
+    
+                // Initialize carousel
+                showImage(currentImageIndex);
+                setInterval(nextImage, 5000); // Change image every 5 seconds
+            } else if (images.length === 1) {
+                // If there is only one image, make sure it is visible
+                images[0].classList.remove('opacity-0');
+                images[0].classList.add('opacity-100');
+            }
+    
+            // Hamburger menu functionality
+            const hamburger = document.getElementById('hamburger');
+            const navMenu = document.getElementById('nav-menu');
+            const backdrop = document.getElementById('backdrop');
+            const originalIcon = hamburger.src;
+            const closeIcon = hamburger.getAttribute('data-close-icon');
+    
+            hamburger.addEventListener('click', function() {
+                navMenu.classList.toggle('hidden');
+                backdrop.classList.toggle('hidden');
+                if (navMenu.classList.contains('hidden')) {
+                    hamburger.src = originalIcon;
+                } else {
+                    hamburger.src = closeIcon;
+                }
+            });
+    
+            backdrop.addEventListener('click', function() {
+                navMenu.classList.add('hidden');
+                backdrop.classList.add('hidden');
+                hamburger.src = originalIcon;
+            });
+        });
+    </script>

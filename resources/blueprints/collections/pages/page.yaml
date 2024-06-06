@@ -39,7 +39,7 @@ tabs:
               replicator_preview: true
               hide_display: false
           -
-            handle: featured_image
+            handle: carousel
             field:
               mode: list
               container: assets
@@ -48,7 +48,7 @@ tabs:
               show_filename: true
               show_set_alt: true
               type: assets
-              display: 'Featured Image'
+              display: 'Carousel Images'
               listable: hidden
               instructions_position: above
               visibility: visible
