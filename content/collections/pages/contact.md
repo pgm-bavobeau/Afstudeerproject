@@ -6,6 +6,7 @@ title: Contact
 subheader: 'Hoe contacteer je ons?'
 parent: 4bb0bd53-5ba2-4801-bad4-a5b392de59f1
 updated_by: 5f3ca023-efc0-4cf9-bfa2-5f2951f37174
-updated_at: 1712777496
+updated_at: 1717700012
 subtitle: 'Hoe contacteer je ons?'
+carousel: covers/cover-contact.jpg
 ---
