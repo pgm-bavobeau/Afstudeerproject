@@ -17,9 +17,6 @@ export default {
                 '128': '32rem',
                 '144': '36rem',
             },
-            backgroundImage: {
-                'hero-image': 'var(--hero-image)',
-            },
             container: {
                 center: true,
                 padding: {

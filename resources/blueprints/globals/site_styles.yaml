@@ -75,3 +75,14 @@ tabs:
               restrict: true
               type: assets
               display: Font
+      -
+        display: Images
+        fields:
+          -
+            handle: carousel
+            field:
+              container: assets
+              type: assets
+              display: Carousel
+              instructions: 'Wanneer geen header image beschikbaar is gebruik deze.'
+              max_files: 1

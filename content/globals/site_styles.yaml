@@ -8,6 +8,8 @@ data:
   secondary_background_color: '#EBE8DE'
   primary_color: '#1060A9'
   secondary_color: '#ED7926'
+  tertiary_color: '#ff0000'
   text_color: '#000000'
   header_text_color: '#ffffff'
   font: 'fonts/octin sports rg.woff2'
+  carousel: covers/cover-home-21.jpg
