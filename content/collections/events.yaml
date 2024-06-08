@@ -10,7 +10,7 @@ date: true
 sort_dir: asc
 default_status: draft
 date_behavior:
-  past: private
+  past: unlisted
   future: public
 preview_targets:
   -

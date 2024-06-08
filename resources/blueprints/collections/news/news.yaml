@@ -13,11 +13,6 @@ tabs:
               validate:
                 - required
           -
-            handle: subtitle
-            field:
-              type: text
-              display: Subtitle
-          -
             handle: featured_image
             field:
               max_files: 1
@@ -54,7 +49,6 @@ tabs:
             handle: date
             field:
               type: date
-              required: true
               default: now
               validate:
                 - required

@@ -9,7 +9,7 @@
             {{ if groups }}
             &emsp;<i class="fa-solid fa-tag"></i> Bericht voor: 
             {{ groups }}
-                <a href="{{ url }}" class="text-secondary underline">{{ title }}{{ unless last }}, {{ /unless }}</a>
+                <a href="{{ url }}" class="text-secondary underline">{{ title }}</a>{{ unless last }},{{ /unless }}
             {{ /groups }}
             {{ /if }}
         </p>

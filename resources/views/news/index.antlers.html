@@ -17,7 +17,7 @@
 </section>
 <section class="container">
     <ul class="flex flex-col gap-2 my-6">
-        {{ collection from="news|events" }}
+        {{ collection from="news|events" sort="date:desc"}}
             {{ partial:components/news }}
         {{ /collection news }}
     </ul>
