@@ -1,12 +1,29 @@
-<section>
-    <h2>{{ title }}</h2>
-    <p>{{ date }}</p>
-    <p>{{ author:name }}</p>
-    {{ event_content }}
-</section>
-<section>
+<section class="container relative min-h-72 sm:min-h-96">
+    <div class="mb-2">
+        <p class="text-sm text-gray-400">
+            {{ nav:breadcrumbs include_home="false" }}
+            {{ unless first }}
+            <a href="{{ url }}" class="text-secondary underline">{{ title }}</a>{{ unless last }} > {{ /unless }}
+            {{ /unless }}
+            {{ /nav:breadcrumbs }}
+        </p>
+    </div>
+    {{ if groups }}
+    <div class="mb-6">
+        <i class="fa-solid fa-tag text-secondary"></i> Bericht voor: 
+        {{ groups }}
+        <a href="{{ url }}" class="text-secondary underline">{{ title }}</a>{{ unless last }},{{ /unless }}
+        {{ /groups }}
+    </div>
+    {{ /if }}
+    {{ content }}
+    {{ author }}
+    <div class="mt-4">
+        {{ partial:components/author }}
+    </div>
+    {{ /author }}
     {{ if enable_reservations }}
-        <h2>Reserve your spot</h2>
+        <h3>Reserve your spot</h3>
         {{ partial:forms/reservation_form id="{{ id }}" reservation_fields="{{ reservation_fields }}" }}
     {{ /if }}
 </section>
