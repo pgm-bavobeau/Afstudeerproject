@@ -27,10 +27,10 @@
             </nav>
             <img src="/assets/icons/dropdown.png" data-close-icon="/assets/icons/close.png" alt="" id="hamburger" class="relative z-20 box-content p-2.5 w-10 h-auto xl:hidden">
         </div>
-        <div class="w-full top-10 sm:top-20 relative lg:text-center">
+        <div class="w-full top-8 sm:top-20 relative lg:text-center">
             <div class="container">
                 <h1 class="text-4xl sm:text-5xl md:text-6xl">{{ header ? header : title }}</h1>
-                <h3 class="text-header">{{ subtitle }}</h3>
+                <h3 class="text-header">{{ subtitle ? subtitle : date | iso_format("D MMMM YYYY") }}</h3>
             </div>
         </div>
         <img src="/assets/icons/brush.png" alt="" class="absolute w-full bottom-0 left-0">
