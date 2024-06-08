@@ -1,6 +1,8 @@
 <div class="flex flex-row items-center">
     {{ avatar }}
-        <img src="{{ url }}" alt="Avatar van {{ name }} {{ last_name }}" class="w-8 h-8 rounded-full">
+    <div class="w-8 h-8">
+        {{ partial:components/avatar }}
+    </div>
     {{ /avatar }}
     <p class="ml-2 text-sm text-primary">{{ name }} {{ last_name }}</p>
 </div>
