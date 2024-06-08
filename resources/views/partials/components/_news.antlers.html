@@ -1,0 +1,26 @@
+<li>
+    <a href="{{ url }}">
+        <h4>{{ title }}</h4>
+    </a>
+    <div class="mb-2 flex align-center">
+        <p class="text-sm text-gray-400">
+            <i class="fa-regular fa-clock fa-xs"></i>
+            {{ date | iso_format("D MMMM YYYY") }}
+            {{ if groups }}
+            &emsp;<i class="fa-solid fa-tag"></i> Bericht voor: 
+            {{ groups }}
+                <a href="{{ url }}" class="text-secondary underline">{{ title }}{{ unless last }}, {{ /unless }}</a>
+            {{ /groups }}
+            {{ /if }}
+        </p>
+    </div>
+    <a href="{{ url }}">
+        {{ content | safe_truncate(200, '...') }}
+    </a>
+    {{ author }}
+        {{ partial:components/author }}
+    {{ /author }}
+</li>
+{{ unless last }}
+<hr class="border-gray-200">
+{{ /unless }}

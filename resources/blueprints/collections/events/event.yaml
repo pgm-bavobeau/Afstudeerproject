@@ -48,11 +48,11 @@ tabs:
               type: assets
               display: 'Background image'
           -
-            handle: event_content
+            handle: content
             field:
               remove_empty_nodes: false
               type: bard
-              display: 'Event Content'
+              display: Content
       -
         display: Reservations
         fields:
@@ -190,3 +190,11 @@ tabs:
               validate:
                 - required
               instructions: 'Dit veld wordt gebruikt om het evenement niet meer te tonen als het gepasseerd is. Best zetten de dag na het einde van evenement.'
+          -
+            handle: groups
+            field:
+              type: terms
+              taxonomies:
+                - groups
+              display: Groups
+              mode: select

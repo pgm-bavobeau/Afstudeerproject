@@ -1,6 +1,8 @@
 <section>
-    <h2>{{ title }}</h2>
     <p>{{ date }}</p>
-    <p>{{ author:name }}</p>
+    {{ groups }}
+    <p>{{ title }}</p>
+    {{ /groups }}
     {{ article_content }}
+    <p>{{ author:name }}</p>
 </section>

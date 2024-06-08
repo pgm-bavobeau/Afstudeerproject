@@ -2,6 +2,8 @@ title: 'Events Articles'
 template: events/show
 layout: layout
 mount: edf97461-7ff6-4cf5-b2c9-b31fdb0bdb2d
+taxonomies:
+  - groups
 revisions: false
 route: '/{{mount}}/{{slug}}'
 date: true

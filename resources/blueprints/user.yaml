@@ -9,7 +9,14 @@ tabs:
             handle: name
             field:
               type: text
-              display: Name
+              display: 'First name'
+              width: 50
+          -
+            handle: last_name
+            field:
+              type: text
+              display: 'Last name'
+              width: 50
           -
             handle: email
             field:
@@ -23,22 +30,11 @@ tabs:
             field:
               type: integer
               display: 'Phone Number'
-              listable: hidden
-              instructions_position: above
-              visibility: visible
-              replicator_preview: true
-              hide_display: false
           -
             handle: bio
             field:
-              antlers: false
               type: textarea
               display: Bio
-              listable: hidden
-              instructions_position: above
-              visibility: visible
-              replicator_preview: true
-              hide_display: false
           -
             handle: avatar
             field:
@@ -61,3 +57,8 @@ tabs:
               width: 50
               listable: true
               filterable: false
+          -
+            handle: is_parent
+            field:
+              type: toggle
+              display: 'Is parent'
