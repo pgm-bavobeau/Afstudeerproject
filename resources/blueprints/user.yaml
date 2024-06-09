@@ -40,7 +40,9 @@ tabs:
             field:
               type: assets
               max_files: 1
-              container: assets
+              container: avatars
+              folder: public
+              restrict: true
           -
             handle: roles
             field:
