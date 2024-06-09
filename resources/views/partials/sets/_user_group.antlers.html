@@ -1,5 +1,7 @@
 <ul>
     {{ user_groups_field }} {{ users group="{handle}" }}
-    <li>{{ name }}</li>
+    <li>
+        {{ partial:components/small_person }}
+    </li>
     {{ /users }} {{ /user_groups_field }}
 </ul>
