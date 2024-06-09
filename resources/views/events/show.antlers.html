@@ -1,4 +1,4 @@
-<section class="container relative min-h-72 sm:min-h-96">
+<section class="container relative min-h-72 sm:min-h-96 mb-6">
     <div class="mb-2">
         <p class="text-sm text-gray-400">
             {{ nav:breadcrumbs include_home="false" }}
@@ -23,7 +23,6 @@
     </div>
     {{ /author }}
     {{ if enable_reservations }}
-        <h3>Reserve your spot</h3>
         {{ partial:forms/reservation_form id="{{ id }}" reservation_fields="{{ reservation_fields }}" }}
     {{ /if }}
 </section>
