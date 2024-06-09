@@ -19,7 +19,7 @@ This is the navigation for the home page.
                 {{ if first }}
                     <li class="w-full"><a href="{{ url }}" class="text-black block text-base font-bold xl:font-normal py-4 xl:py-1 border-t xl:border-t-0 border-gray-100 m-auto {{ if is_current }} xl:border-b-2 xl:border-white xl:border-solid text-secondary {{ /if }} hover:text-secondary xl:text-header xl:hover:text-header xl:hover:border-b-2 xl:hover:border-white xl:hover:border-solid text-center">Home</a></li>
                 {{ else }}
-                    <li class="w-full"><a href="{{ url }}" class="text-black block text-base font-bold xl:font-normal py-4 xl:py-1 border-t xl:border-t-0 border-gray-100 m-auto {{ if is_current }} xl:border-b-2 xl:border-white xl:border-solid text-secondary {{ /if }} hover:text-secondary xl:text-header xl:hover:text-header xl:hover:border-b-2 xl:hover:border-white xl:hover:border-solid text-center">{{title}}</a></li>
+                    <li class="w-full {{if last}} xl:hidden {{/if}}"><a href="{{ url }}" class="text-black block text-base font-bold xl:font-normal py-4 xl:py-1 border-t xl:border-t-0 border-gray-100 m-auto {{ if is_current }} xl:border-b-2 xl:border-white xl:border-solid text-secondary {{ /if }} hover:text-secondary xl:text-header xl:hover:text-header xl:hover:border-b-2 xl:hover:border-white xl:hover:border-solid text-center {{if last}} text-tertiary {{/if}}">{{title}}</a></li>
                 {{ /if }}
                 {{ /nav:main_nav_jongens }}
                 {{ if logged_in }}

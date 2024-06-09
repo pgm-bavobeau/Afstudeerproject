@@ -1,14 +1,15 @@
 <li class="last:md:col-span-2 last:lg:col-span-1 relative w-full">
-    <a href="{{ url }}" class="relative flex justify-end flex-col p-5 w-full h-56 bg-cover bg-center" {{ background_image }} style="background-image: url('{{permalink}}');" {{ /background_image }}>
-        <div class="w-full h-full absolute inset-0 bg-gradient-to-t from-[#00000080] hover:bg-none hover:bg-[#00000099]"></div>
-        <h3 class="text-white relative leading-tight">{{ title }}</h3>
-        <h4 class="text-white relative">
-            {{ if date_field:start == date_field:end }}
+    <a href="{{ url }}" class="relative w-full h-56 bg-cover bg-center" {{ background_image }} style="background-image: url('{{permalink}}');" {{ /background_image }}>
+        <div class="w-full h-full p-5 flex justify-end flex-col absolute inset-0 bg-gradient-to-t from-[#00000080] hover:bg-none hover:bg-[#00000099]">
+            <h3 class="text-white relative leading-tight">{{ title }}</h3>
+            <h4 class="text-white relative">
+                {{ if date_field:start == date_field:end }}
                 {{ date_field:start | iso_format("D MMMM YYYY") }}
-            {{ else }}
+                {{ else }}
                 {{ date_field:start | iso_format("D") }} - {{ date_field:end | iso_format("D MMMM YYYY") }}
-            {{ /if }}
-        </h4>
-        <u class="text-white relative text">Meer info</u>
+                {{ /if }}
+            </h4>
+            <u class="text-white relative text">Meer info</u>
+        </div>
     </a>
 </li>
