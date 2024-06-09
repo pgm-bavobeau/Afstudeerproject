@@ -1,26 +1,28 @@
-<section class="container">
-    <div class="bg-backgroundSecondary">
-        <ul class="pb-4 flex flex-col gap-2">
+<section class="container lg:grid lg:grid-cols-3 lg:gap-6">
+    <aside class="lg:order-last">
+        <div class="bg-backgroundSecondary">
+            <ul class="pb-4 flex flex-col gap-2">
             {{ collection:events limit="4" }}
             {{ if first }}
-            {{ partial:card_collection }}
+                {{ partial:card_collection }}
             {{ else }}
-            <li class="px-4">
-                <a href="{{ url }}">
-                    <p class="underline">{{ date | iso_format("D MMMM YYYY") }} - {{ title }}</p>
-                </a>
-            </li>
+                <li class="px-4">
+                    <a href="{{ url }}">
+                        <p class="hover:underline">{{ date | iso_format("D MMMM YYYY") }} - {{ title }}</p>
+                    </a>
+                </li>
             {{ /if }}
             {{ /collection:events }}
+            </ul>
+        </div>
+    </aside>
+    <div class="lg:col-span-2">
+        <ul class="flex flex-col gap-4 lg:gap-5 my-6">
+            {{ collection from="news|events" sort="date:desc"}}
+            {{ partial:components/news }}
+            {{ /collection news }}
         </ul>
     </div>
-</section>
-<section class="container">
-    <ul class="flex flex-col gap-2 my-6">
-        {{ collection from="news|events" sort="date:desc"}}
-            {{ partial:components/news }}
-        {{ /collection news }}
-    </ul>
 </section>
 
     
