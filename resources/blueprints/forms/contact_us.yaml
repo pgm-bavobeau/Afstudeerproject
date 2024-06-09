@@ -7,56 +7,29 @@ tabs:
           -
             handle: name
             field:
-              input_type: text
-              antlers: false
               type: text
-              display: Name
-              listable: hidden
-              instructions_position: above
-              visibility: visible
-              replicator_preview: true
-              hide_display: false
+              display: Naam
               validate:
                 - required
           -
             handle: email
             field:
-              input_type: text
-              antlers: false
               type: text
               display: E-mail
-              listable: hidden
-              instructions_position: above
-              visibility: visible
-              replicator_preview: true
-              hide_display: false
               validate:
                 - required
                 - email
           -
             handle: subject
             field:
-              input_type: text
-              antlers: false
               type: text
-              display: Subject
-              listable: hidden
-              instructions_position: above
-              visibility: visible
-              replicator_preview: true
-              hide_display: false
+              display: Onderwerp
               validate:
                 - required
           -
             handle: content
             field:
-              antlers: false
               type: textarea
-              display: Content
-              listable: hidden
-              instructions_position: above
-              visibility: visible
-              replicator_preview: true
-              hide_display: false
+              display: Bericht
               validate:
                 - required
