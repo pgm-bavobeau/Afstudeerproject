@@ -1,56 +1,102 @@
-{{ user }}
-{{ user:profile_form }}
-{{ if errors }}
-<div class="bg-red-300 text-white p-2">
-    {{ errors }}
-        {{ value }}<br>
-    {{ /errors }}
-</div>
-{{ /if }}
+<section class="container">
+    {{ user }} {{ user:profile_form }}
+    <div class="mx-auto max-w-lg lg:max-w-xl">
+        <h4>Verander uw gegevens</h4>
+        <div class="grid gap-6 mb-6">
+            {{ if errors }}
+            <div class="bg-red-300 text-white p-2">
+                {{ errors }} {{ value }}<br />
+                {{ /errors }}
+            </div>
+            {{ /if }} {{ if success }}
+            <div class="bg-green-300 text-white p-2">{{ success }}<br /></div>
+            {{ /if }}
+            <div>
+                <label class="block mb-2 text-sm font-medium text-gray-900"
+                    >Email</label
+                >
+                <input
+                    type="email"
+                    name="email"
+                    value="{{ old:email or email }}"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:border-secondary focus:outline-none block w-full p-2.5"
+                />
+            </div>
 
-{{ if success }}
-<div class="bg-green-300 text-white p-2">
-    {{ success }}<br>
-</div>
-{{ /if }}
+            {{ user:in group="leiding" }}
+            <div>
+                <label class="block mb-2 text-sm font-medium text-gray-900"
+                    >Bio</label
+                >
+                <textarea
+                    name="bio"
+                    class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:border-secondary focus:outline-none"
+                >{{ old:bio or bio }}</textarea>
+            </div>
+            {{ /user:in }}
 
-<label>Email</label>
-<input type="email" name="email" value="{{ old:email or email }}" />
-
-{{ user:in group="leiding" }}
-<label>Bio</label>
-<textarea name="bio">{{ old:bio or bio }}</textarea>
-{{ /user:in }}
-
-<button type="submit">Save</button>
-{{ /user:profile_form }}
-<h2>Verander wachtwoord</h2>
-{{ user:password_form }}
- 
-    {{ if errors }}
-        <div class="bg-red-300 text-white p-2">
-            {{ errors }}
-                {{ value }}<br>
-            {{ /errors }}
+            <button
+                type="submit"
+                class="text-white bg-primary hover:bg-blue-800 focus:ring-3 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center"
+            >
+                Opslaan
+            </button>
         </div>
-    {{ /if }}
- 
-    {{ if success }}
-        <div class="bg-green-300 text-white p-2">
-            {{ success }}<br>
+    </div>
+    {{ /user:profile_form }}
+    <div class="mx-auto max-w-lg lg:max-w-xl">
+        <h4>Verander wachtwoord</h4>
+        {{ user:password_form }}
+        <div class="grid gap-6 mb-6">
+            {{ if errors }}
+            <div class="bg-red-300 text-white p-2">
+                {{ errors }} {{ value }}<br />
+                {{ /errors }}
+            </div>
+            {{ /if }} {{ if success }}
+            <div class="bg-green-300 text-white p-2">{{ success }}<br /></div>
+            {{ /if }}
+
+            <div>
+                <label class="block mb-2 text-sm font-medium text-gray-900"
+                    >Current Password</label
+                >
+                <input
+                    type="password"
+                    name="current_password"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:border-secondary focus:outline-none block w-full p-2.5"
+                />
+            </div>
+
+            <div>
+                <label class="block mb-2 text-sm font-medium text-gray-900"
+                    >New Password</label
+                >
+                <input
+                    type="password"
+                    name="password"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:border-secondary focus:outline-none block w-full p-2.5"
+                />
+            </div>
+
+            <div>
+                <label class="block mb-2 text-sm font-medium text-gray-900"
+                    >Confirm Password</label
+                >
+                <input
+                    type="password"
+                    name="password_confirmation"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:border-secondary focus:outline-none block w-full p-2.5"
+                />
+            </div>
+
+            <button
+                type="submit"
+                class="text-white bg-primary hover:bg-blue-800 focus:ring-3 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center"
+            >
+                Opslaan
+            </button>
         </div>
-    {{ /if }}
- 
-    <label>Current Password</label>
-    <input type="password" name="current_password" />
- 
-    <label>New Password</label>
-    <input type="password" name="password" />
- 
-    <label>Confirm Password</label>
-    <input type="password" name="password_confirmation" />
- 
-    <button type="submit">Save</button>
- 
-{{ /user:password_form }}
-{{ /user }}
+    </div>
+    {{ /user:password_form }} {{ /user }}
+</section>

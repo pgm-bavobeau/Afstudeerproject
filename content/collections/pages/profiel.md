@@ -5,5 +5,7 @@ template: profiel
 protect: logged_in
 title: Profiel
 updated_by: 5f3ca023-efc0-4cf9-bfa2-5f2951f37174
-updated_at: 1715592973
+updated_at: 1717953778
+subtitle: 'Bekijk uw gegevens'
+parent: home
 ---
