@@ -1,5 +1,9 @@
-name: 'Dago Verheye'
+name: Dago
 groups:
   - bondsraad
   - leiding
+last_name: Verheye
+avatar: 'avatars/Dago Verheye.jpg'
+is_parent: false
+super: false
 id: c09d17cb-aae7-43b1-bb89-8029bb2bc255
