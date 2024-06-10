@@ -74,10 +74,10 @@
 {{ elseif type == 'image_panel' }}
     {{ partial:panel }}
 {{ elseif type == 'user_carousel' }}
-<section class="bg-backgroundSecondary py-8">
-    <div class="container">
-        <h2>Onze gemotiveerde leiding</h2>
-        <div class="flex overflow-x-scroll pb-10 hide-scroll-bar">
+<section class="hidden sm:block bg-backgroundSecondary py-8">
+    <div class="">
+        <h2 class="container">Onze gemotiveerde leiding</h2>
+        <div class="flex overflow-x-scroll lg:mx-8 px-5 lg:px-16 py-8 no-scrollbar">
             <ul class="flex flex-nowrap gap-8">
                 {{ user_groups_field }} {{ users group="{handle}" }}
                 {{ partial:components/small_person }}

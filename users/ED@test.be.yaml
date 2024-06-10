@@ -1,7 +1,10 @@
-name: 'Emiel Derycke'
+name: Emiel
 groups:
   - leiding
   - uniform
   - leeuwkes
 super: false
+last_name: Derycke
+avatar: 'avatars/Emiel Derycke.jpg'
+is_parent: false
 id: e16b8b74-d68c-4975-95d9-b480c244bbf8
