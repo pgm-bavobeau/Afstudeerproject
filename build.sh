@@ -22,8 +22,14 @@ fi
 php composer-setup.php --quiet
 rm composer-setup.php
 
+# Move composer.phar to a directory in the PATH
+mv composer.phar /usr/local/bin/composer
+
+# Change to the project directory
+cd /vercel/path0
+
 # INSTALL COMPOSER DEPENDENCIES
-php composer.phar install
+composer install --no-interaction --prefer-dist --optimize-autoloader
 
 # GENERATE APP KEY
 php artisan key:generate
