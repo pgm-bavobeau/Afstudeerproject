@@ -23,7 +23,7 @@ php composer-setup.php --quiet
 rm composer-setup.php
  
 # INSTALL COMPOSER DEPENDENCIES
-php composer install
+composer install
  
 # GENERATE APP KEY
 php artisan key:generate
