@@ -1,9 +1,13 @@
 <section class="container">
-    <section>
+    <div>
         <h2>Bestuur & uniform</h2>
-        <ul class="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2">
+        <ul class="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3">
             {{ users role="bondsleider" }}
                 {{ partial:components/person role="Bondsleider" }}
+            {{ /users }}
+
+            {{ users role="volwassen_begeleider" }}
+                {{ partial:components/person role="Volwassen Begeleider" }}
             {{ /users }}
 
             {{ users group="bondsraad" }}
@@ -14,15 +18,20 @@
                 {{ partial:components/person role="Uniform" }}
             {{ /users }}
         </ul>
-    </section>
-    <section>
-        {{ collection:bannen }}
+    </div>
+    <hr>
+    {{ collection:bannen }}
+    <div>
         <h2>{{ title }}</h2>
-        <ul class="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2">
-            {{ users group:contains="{{ title | lower }}" }}
+        <ul class="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3">
+            {{ banleider }}
+                {{ partial:components/person role="Banleider" }}
+            {{ /banleider }}
+            {{ leider sort="name, asc" }}
                 {{ partial:components/person }}
-            {{ /users }}
+            {{ /leider }}
         </ul>
-        {{ /collection:bannen }}
-    </section>
+    </div>
+    <hr>
+    {{ /collection:bannen }}
 </section>

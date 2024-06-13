@@ -1,8 +1,8 @@
 bondsleider:
   title: Bondsleider
-bondsraad:
-  title: Bondsraad
-banleider:
-  title: Banleider
-uniform:
-  title: Uniform
+  permissions:
+    - super
+volwassen_begeleider:
+  title: 'Volwassen Begeleider'
+  permissions:
+    - super

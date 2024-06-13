@@ -16,25 +16,27 @@ tabs:
             handle: ban_icon
             field:
               max_files: 1
-              mode: list
               container: assets
-              restrict: false
-              allow_uploads: true
-              show_filename: true
-              show_set_alt: true
               type: assets
               display: 'Ban Icon'
-              listable: hidden
-              instructions_position: above
-              visibility: visible
-              replicator_preview: true
-              hide_display: false
           -
             handle: content
             field:
               type: markdown
               display: Content
               localizable: true
+          -
+            handle: banleider
+            field:
+              type: users
+              display: Banleider
+              width: 50
+          -
+            handle: leider
+            field:
+              type: users
+              display: Leider
+              width: 50
   sidebar:
     display: Sidebar
     sections:

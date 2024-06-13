@@ -60,13 +60,6 @@ tabs:
               listable: true
               filterable: false
           -
-            handle: group
-            field:
-              taxonomies:
-                - groups
-              type: terms
-              display: Group
-          -
             handle: is_parent
             field:
               type: toggle

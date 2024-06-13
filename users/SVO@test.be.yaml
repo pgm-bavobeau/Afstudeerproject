@@ -1,0 +1,7 @@
+name: Simon
+last_name: 'Van Oost'
+avatar: 'avatars/Simon Van Oost.jpg'
+is_parent: false
+groups:
+  - leiding
+id: 6e17ffe0-84b1-46c9-8070-24a10e49c75c

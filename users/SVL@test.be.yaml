@@ -1,0 +1,7 @@
+name: Simon
+last_name: 'Van Lanckere'
+avatar: 'avatars/Simon Van Lanckere.jpg'
+is_parent: false
+groups:
+  - leiding
+id: a7de1f14-6cf3-4fb7-a96d-9c8a813aaf29

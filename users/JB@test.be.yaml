@@ -1,0 +1,11 @@
+name: Jarne
+last_name: Bultiauw
+avatar: 'avatars/Jarne Bultiauw.jpg'
+group:
+  - leeuwkes
+is_parent: false
+groups:
+  - leiding
+  - bondsraad
+super: false
+id: 2e24f19b-4c2c-4572-8e71-715e291e0905

@@ -1,8 +1,10 @@
 name: Arthur
 groups:
   - leiding
-  - bondsleider
 last_name: Derycke
 avatar: 'avatars/Arthur Derycke.jpg'
 is_parent: false
+super: false
+roles:
+  - bondsleider
 id: 3f392e1d-c42c-481d-b229-f1f991872246

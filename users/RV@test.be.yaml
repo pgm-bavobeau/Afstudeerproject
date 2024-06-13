@@ -1,0 +1,9 @@
+name: Rune
+last_name: Vercammen
+avatar: 'avatars/Rune Vercammen.jpg'
+group:
+  - leeuwkes
+is_parent: false
+groups:
+  - leiding
+id: 928fc949-29a4-414e-8666-4d3104d9ed6c

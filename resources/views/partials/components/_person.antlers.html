@@ -1,11 +1,11 @@
 <li class="w-full h-full aspect-square ">
-        <div class="group relative w-full h-full overflow-hidden">
+        <div class="group relative flex justify-center w-full h-full overflow-hidden">
             {{ avatar }}
             {{ partial:components/avatar }}
             {{ /avatar }}
             <div class="absolute w-full h-full inset-0 p-6 flex justify-end flex-col bg-gradient-to-t from-[#000000bb] to-25% to-[#00000000]">
                 <h4 class="text-white">{{ name }} {{ last_name }}</h4>
-                <p class="text-white">{{ role }}</p>
+                <p class="text-white">{{ role ? role : "Leider" }}</p>
             </div>
         </div>
 </li>

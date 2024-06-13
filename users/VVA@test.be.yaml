@@ -1,0 +1,10 @@
+name: Victor
+last_name: 'Van Acker'
+avatar: 'avatars/Victor Van Acker.jpg'
+group:
+  - hernieuwers
+is_parent: false
+groups:
+  - leiding
+  - uniform
+id: 88811dfa-1082-4074-9a35-01decf644bf6
