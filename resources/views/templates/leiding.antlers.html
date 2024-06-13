@@ -6,11 +6,11 @@
                 {{ partial:components/person role="Bondsleider" }}
             {{ /users }}
 
-            {{ users role="bondsraad" }}
+            {{ users group="bondsraad" }}
                 {{ partial:components/person role="Bondsraad" }}
             {{ /users }}
 
-            {{ users group="uniform" }}
+            {{ users group="uniform" groups:doesnt_contain="bondsraad" }}
                 {{ partial:components/person role="Uniform" }}
             {{ /users }}
         </ul>

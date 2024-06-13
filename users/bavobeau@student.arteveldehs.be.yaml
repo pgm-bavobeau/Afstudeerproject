@@ -8,6 +8,10 @@ bio: 'Dit is bavo zijn bio'
 avatar: 'avatars/Bavo Beaumon.jpg'
 last_name: Beaumon
 is_parent: false
+group:
+  - jonghernieuwers
+roles:
+  - bondsraad
 id: 5f3ca023-efc0-4cf9-bfa2-5f2951f37174
 password_hash: $2y$10$xcfTK84Aab49JVSbPSN3W.x12ZiDowE5U840y41u6ffNqSx4h88tW
 preferences:
