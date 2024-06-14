@@ -8,6 +8,7 @@ export default defineConfig({
     },
     plugins: [
         laravel({
+            detectTls: 'afstudeerproject-production.up.railway.app',
             input: [
                 'resources/css/site.css',
                 'resources/js/site.js',
