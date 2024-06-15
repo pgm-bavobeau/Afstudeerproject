@@ -90,4 +90,6 @@
     {{ partial:3_cards }}
 {{ elseif type == '3_cards_collection'}}
     {{ partial:3_cards }}
+{{ else }}
+    {{ partial:{{type}} }}
 {{ /if }}
