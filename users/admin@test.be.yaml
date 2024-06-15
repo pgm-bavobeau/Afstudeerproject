@@ -1,0 +1,6 @@
+name: Admin
+last_name: Admin
+is_parent: false
+super: true
+id: 21a4efd8-3077-413c-9f16-fce7863233ca
+password_hash: $2y$10$np01iJZPpMOYdVtlmGpyN.zcQrUMyS/kAo/CpDQmlYf3Fp/F.UdLa
